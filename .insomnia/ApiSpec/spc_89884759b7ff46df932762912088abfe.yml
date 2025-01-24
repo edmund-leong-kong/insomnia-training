@@ -1,7 +1,7 @@
 _id: spc_89884759b7ff46df932762912088abfe
 type: ApiSpec
 parentId: wrk_51218dd71dcb4dab9cfd25003bc1df64
-modified: 1737723695980
+modified: 1737728661560
 created: 1737723695973
 fileName: Transactions API of BanKonG 1.0.5
 contents: >+
@@ -9,7 +9,7 @@ contents: >+
 
   tags:
     - name: Transactions
-      description: Operations related to transactions
+      description: Operations related to transactions. Test
   info:
     contact:
       email: test@test.com
