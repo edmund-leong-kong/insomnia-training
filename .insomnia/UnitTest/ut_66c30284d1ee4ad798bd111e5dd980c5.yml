@@ -1,0 +1,14 @@
+_id: ut_66c30284d1ee4ad798bd111e5dd980c5
+type: UnitTest
+parentId: uts_9ac2c3c02cc3497e96ff18e04a499578
+modified: 1737723695978
+created: 1737723695978
+requestId: req_a0dec184cc584eb5b9540b1c241957e4
+name: Confirm number of transactions=3
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);
+  const body = JSON.parse(response1.data);
+  //console.log(body);
+  expect(body).to.have.lengthOf(3);
+metaSortKey: -1737657641261

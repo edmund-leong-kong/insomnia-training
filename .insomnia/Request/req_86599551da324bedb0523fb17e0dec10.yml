@@ -1,0 +1,48 @@
+_id: req_86599551da324bedb0523fb17e0dec10
+type: Request
+parentId: fld_30fa12a8fc124ffbb45bc047fb39be5a
+modified: 1737723695976
+created: 1737723695976
+url: "{{ _.base_url }}/transactions/:id"
+name: Update a transaction
+description: Change a transaction
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"source": "GR872659435350353",
+    	"senderName": "Max Mustermann",
+    	"destination": "DE8412325587359375895",
+    	"amount": 100,
+    	"currency": "USD",
+    	"subject": "Invoice #42-08/15"
+    }
+parameters:
+  - id: pair_77979ff992244d1197654c0a8110c370
+    name: ""
+    value: ""
+    description: ""
+    disabled: false
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: apikey
+  value: "{{ _.apikey }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1737656979056
+isPrivate: false
+pathParameters:
+  - name: id
+    value: "42"
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
