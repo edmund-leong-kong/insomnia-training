@@ -1,0 +1,28 @@
+_id: req_3cca7339393547e0a785fb2e2863cee3
+type: Request
+parentId: fld_99ed48b72cff443692ac6702d7ea380f
+modified: 1739199693960
+created: 1739199693960
+url: "{{ _.base_url }}/{{ _.workspace }}/rbac/roles"
+name: List roles for a workspace
+description: List all roles by workspace
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693960
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

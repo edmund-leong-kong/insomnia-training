@@ -1,0 +1,36 @@
+_id: req_acfec58a31fa4856a4bbda921ce12a19
+type: Request
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693944
+created: 1739199693944
+url: "{{ _.base_url }}/schemas/vaults/{{ _.vault_name }}"
+name: Validate Vault Schema
+description: Validates the given vault schema data against predefined validation rules.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "schemaData": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693944
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

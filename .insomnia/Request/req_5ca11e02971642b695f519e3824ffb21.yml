@@ -1,0 +1,29 @@
+_id: req_5ca11e02971642b695f519e3824ffb21
+type: Request
+parentId: fld_a5ce5a96381142b8ba0917b84b76330a
+modified: 1739199693922
+created: 1739199693922
+url: "{{ _.base_url }}/{{ _.workspace }}/services/{{ _.service_id_or_name
+  }}/routes/{{ _.route_id_or_name }}"
+name: Fetch a route associated with a Service in a workspace
+description: Get a route associated with a Service using ID or name in a workspace.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693922
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

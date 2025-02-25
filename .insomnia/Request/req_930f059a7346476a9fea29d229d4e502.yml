@@ -1,0 +1,39 @@
+_id: req_930f059a7346476a9fea29d229d4e502
+type: Request
+parentId: fld_06a43b6bbab94c41aeefd2c56161e734
+modified: 1739199693934
+created: 1739199693934
+url: "{{ _.base_url }}/{{ _.workspace }}/consumer_groups/{{ _.group_name_or_id }}"
+name: Create consumer group
+description: Create a consumer group by passing a new group name as the path parameter
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "my_group",
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693934
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,37 @@
+_id: req_ae24df9085504858a7a38dbd98f4c576
+type: Request
+parentId: fld_6cd2d255569349e1becef3a1201ef7a7
+modified: 1739199693945
+created: 1739199693945
+url: "{{ _.base_url }}/admins/password_resets"
+name: Send a Password Reset Email to an Admin
+description: Using a registered admin's email address issue a password reset
+  email to the admin.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "email": "admin@example.com"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693945
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

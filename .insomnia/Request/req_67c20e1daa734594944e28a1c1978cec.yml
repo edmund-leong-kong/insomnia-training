@@ -1,0 +1,37 @@
+_id: req_67c20e1daa734594944e28a1c1978cec
+type: Request
+parentId: fld_b280d58e241e4f1e84e9abcbe9518632
+modified: 1739199693912
+created: 1739199693912
+url: "{{ _.base_url }}/{{ _.workspace }}/key-sets"
+name: List all Key-sets in a workspace
+description: List all Key-sets in a workspace
+method: GET
+body: {}
+parameters:
+  - name: size
+    disabled: true
+    value: "100"
+  - name: offset
+    disabled: true
+    value: string
+  - name: tags
+    disabled: true
+    value: string
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693912
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

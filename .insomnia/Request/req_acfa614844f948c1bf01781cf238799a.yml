@@ -1,0 +1,40 @@
+_id: req_acfa614844f948c1bf01781cf238799a
+type: Request
+parentId: fld_b280d58e241e4f1e84e9abcbe9518632
+modified: 1739199693885
+created: 1739199693885
+url: "{{ _.base_url }}/key-sets/{{ _.key-set_id_or_name }}"
+name: Update key-set
+description: |
+  Update a Key Set using ID or name.
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "my-key_set",
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693885
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

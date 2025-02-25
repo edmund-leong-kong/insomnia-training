@@ -1,0 +1,28 @@
+_id: req_4a5d350b205343168f2ddd3f8b525550
+type: Request
+parentId: fld_6a937d1db9344ae483e2150c4d84e5cc
+modified: 1739199693940
+created: 1739199693940
+url: "{{ _.base_url }}/endpoints"
+name: List all endpoints
+description: List all available endpoints provided by the Admin API.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693940
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

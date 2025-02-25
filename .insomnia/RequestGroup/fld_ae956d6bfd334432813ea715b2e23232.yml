@@ -1,0 +1,22 @@
+_id: fld_ae956d6bfd334432813ea715b2e23232
+type: RequestGroup
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693871
+created: 1739199693871
+name: Upstreams
+description: >
+  The upstream object represents a virtual hostname and can be used to load
+  balance incoming requests over multiple services (targets). 
+
+  <br><br>
+
+  An upstream also includes a [health checker](https://docs.konghq.com/gateway/latest/how-kong-works/health-checks/), which can enable and disable targets based on their ability or inability to serve requests. 
+
+  The configuration for the health checker is stored in the upstream object, and applies to all of its targets.
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1739199693871
+preRequestScript: null
+afterResponseScript: null
+authentication: null
+headers: null

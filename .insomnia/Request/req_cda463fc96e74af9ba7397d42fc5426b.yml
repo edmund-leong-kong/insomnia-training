@@ -1,0 +1,31 @@
+_id: req_cda463fc96e74af9ba7397d42fc5426b
+type: Request
+parentId: fld_a7eb964a7c98499f876c5135465c9669
+modified: 1739199693957
+created: 1739199693957
+url: "{{ _.base_url }}/filter-chains/{{ _.filter_chain_id }}"
+name: Retrieve Filter Chain
+description: |
+  Retrieve Filter Chain
+  '401': 
+    $ref: '#/components/responses/HTTP401Error'
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693957
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

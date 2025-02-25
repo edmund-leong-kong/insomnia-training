@@ -1,0 +1,29 @@
+_id: req_2e2cfccee50741aeb64e66fbf1985afd
+type: Request
+parentId: fld_99ed48b72cff443692ac6702d7ea380f
+modified: 1739199693953
+created: 1739199693953
+url: "{{ _.base_url }}/rbac/roles/{{ _.name_or_id }}/entities/{{ _.entity_id }}"
+name: Retrieve a Role Entity Permission
+description: |
+  Retrieve a Role Entity Permission
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693953
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

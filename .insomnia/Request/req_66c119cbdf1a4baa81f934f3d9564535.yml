@@ -1,0 +1,29 @@
+_id: req_66c119cbdf1a4baa81f934f3d9564535
+type: Request
+parentId: fld_ee8b35e4ae8c49a6b9cd66aa8de881ba
+modified: 1739199693938
+created: 1739199693938
+url: "{{ _.base_url }}/licenses"
+name: List licenses
+description: |
+  List active licenses. The data planes use the most recent updated_at license.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693938
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

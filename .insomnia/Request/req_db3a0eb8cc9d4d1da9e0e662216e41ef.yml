@@ -1,0 +1,28 @@
+_id: req_db3a0eb8cc9d4d1da9e0e662216e41ef
+type: Request
+parentId: fld_e43d019135f14886b967edd600ddacab
+modified: 1739199693909
+created: 1739199693909
+url: "{{ _.base_url }}/{{ _.workspace }}/consumers/{{ _.consumer_username_or_id }}"
+name: Delete a Consumer in a workspace
+description: Delete a Consumer in a workspace
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693909
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

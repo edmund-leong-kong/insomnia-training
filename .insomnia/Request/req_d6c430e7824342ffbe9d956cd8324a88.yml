@@ -1,0 +1,46 @@
+_id: req_d6c430e7824342ffbe9d956cd8324a88
+type: Request
+parentId: fld_a8e7fb40a7764ebfbb8d7a81bf374192
+modified: 1739199693906
+created: 1739199693906
+url: "{{ _.base_url }}/{{ _.workspace }}/certificates"
+name: Create a new Certificate in a workspace
+description: Create a new Certificate in a workspace
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "cert": "-----BEGIN CERTIFICATE-----...",
+      "key": "-----BEGIN RSA PRIVATE KEY-----...",
+      "cert_alt": "string",
+      "key_alt": "\"-----BEGIN EC PRIVATE KEY-----...\"",
+      "snis": [
+        "string"
+      ],
+      "tags": [
+        "string"
+      ],
+      "passphrase": "example"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693906
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

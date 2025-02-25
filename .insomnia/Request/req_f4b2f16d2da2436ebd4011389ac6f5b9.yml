@@ -1,0 +1,56 @@
+_id: req_f4b2f16d2da2436ebd4011389ac6f5b9
+type: Request
+parentId: fld_7d2b7272ce894c4ca1d7bd38930e93c1
+modified: 1739199693891
+created: 1739199693891
+url: "{{ _.base_url }}/routes/{{ _.route_id_or_name }}/plugins/{{ _.plugin_id }}"
+name: Upsert a plugin associated with a route
+description: Create or Update a plugin associated with a route using ID.
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "rate-limiting",
+      "route": "string",
+      "service": "string",
+      "consumer": "string",
+      "instance_name": "rate-limiting-foo",
+      "config": {
+        "hour": 500,
+        "minute": 500
+      },
+      "protocols": [
+        "http"
+      ],
+      "enabled": true,
+      "tags": [
+        "string"
+      ],
+      "ordering": {
+        "before": [
+          "string"
+        ]
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693891
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

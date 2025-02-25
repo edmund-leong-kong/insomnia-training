@@ -1,0 +1,37 @@
+_id: req_fd16704e3bda4e8ca60a2289050a0edd
+type: Request
+parentId: fld_99ed48b72cff443692ac6702d7ea380f
+modified: 1739199693955
+created: 1739199693955
+url: "{{ _.base_url }}/rbac/users/{{ _.name_or_id }}/roles"
+name: Add a User to a Role
+description: |
+  Add a User to a Role
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "roles": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693955
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

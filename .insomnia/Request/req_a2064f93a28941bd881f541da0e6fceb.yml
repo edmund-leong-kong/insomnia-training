@@ -1,0 +1,29 @@
+_id: req_a2064f93a28941bd881f541da0e6fceb
+type: Request
+parentId: fld_99ed48b72cff443692ac6702d7ea380f
+modified: 1739199693960
+created: 1739199693960
+url: "{{ _.base_url }}/{{ _.workspace }}/rbac/roles/{{ _.role }}/endpoints/{{
+  _.endpoint }}/"
+name: Get role-specific permissions for an endpoint within a workspace
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693960
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

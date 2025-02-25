@@ -1,0 +1,28 @@
+_id: req_5ed9ec96c93244d484c07c1a97816bf6
+type: Request
+parentId: fld_a8e7fb40a7764ebfbb8d7a81bf374192
+modified: 1739199693878
+created: 1739199693878
+url: "{{ _.base_url }}/certificates/{{ _.certificate_id }}"
+name: Delete a Certificate
+description: Delete a Certificate
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693878
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

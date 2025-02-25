@@ -1,0 +1,57 @@
+_id: req_1d2d00bc3372439095dbf72644456731
+type: Request
+parentId: fld_7d2b7272ce894c4ca1d7bd38930e93c1
+modified: 1739199693883
+created: 1739199693883
+url: "{{ _.base_url }}/consumers/{{ _.consumer_name_or_id }}/plugins/{{
+  _.plugin_id }}"
+name: Update a plugin associated with a consumer
+description: Update a plugin associated with a consumer using the consumer username or ID.
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "rate-limiting",
+      "route": "string",
+      "service": "string",
+      "consumer": "string",
+      "instance_name": "rate-limiting-foo",
+      "config": {
+        "hour": 500,
+        "minute": 500
+      },
+      "protocols": [
+        "http"
+      ],
+      "enabled": true,
+      "tags": [
+        "string"
+      ],
+      "ordering": {
+        "before": [
+          "string"
+        ]
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693883
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,28 @@
+_id: req_e6f664d5fc0c485bb61a17bb57396caa
+type: Request
+parentId: fld_a5ce5a96381142b8ba0917b84b76330a
+modified: 1739199693916
+created: 1739199693916
+url: "{{ _.base_url }}/{{ _.workspace }}/routes"
+name: Create a new route in a workspace
+description: Create a new route in a workspace
+method: POST
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693916
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

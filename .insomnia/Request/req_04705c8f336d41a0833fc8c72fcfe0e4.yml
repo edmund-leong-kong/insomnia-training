@@ -1,0 +1,30 @@
+_id: req_04705c8f336d41a0833fc8c72fcfe0e4
+type: Request
+parentId: fld_a7eb964a7c98499f876c5135465c9669
+modified: 1739199693958
+created: 1739199693958
+url: "{{ _.base_url }}/services/{{ _.service_id_or_name }}/filter-chains/{{
+  _.filter_chain_id }}"
+name: Delete Filter Chain Associated to a Specific Service
+description: |
+  Delete filter chain associated to a specific service.
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693958
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

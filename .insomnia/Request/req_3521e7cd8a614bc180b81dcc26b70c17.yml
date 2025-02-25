@@ -1,0 +1,57 @@
+_id: req_3521e7cd8a614bc180b81dcc26b70c17
+type: Request
+parentId: fld_7d2b7272ce894c4ca1d7bd38930e93c1
+modified: 1739199693933
+created: 1739199693933
+url: "{{ _.base_url }}/consumer_groups/{{ _.consumer_group_name_or_id
+  }}/plugins/{{ _.plugin_id }}"
+name: Upsert a plugin associated with a Consumer Group
+description: Create or Update a plugin associated with a Consumer Group using ID.
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "rate-limiting",
+      "route": "string",
+      "service": "string",
+      "consumer": "string",
+      "instance_name": "rate-limiting-foo",
+      "config": {
+        "hour": 500,
+        "minute": 500
+      },
+      "protocols": [
+        "http"
+      ],
+      "enabled": true,
+      "tags": [
+        "string"
+      ],
+      "ordering": {
+        "before": [
+          "string"
+        ]
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693933
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

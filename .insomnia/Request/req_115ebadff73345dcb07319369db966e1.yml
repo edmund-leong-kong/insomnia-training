@@ -1,0 +1,56 @@
+_id: req_115ebadff73345dcb07319369db966e1
+type: Request
+parentId: fld_8b030fa7a20a4d2a931a9ac88e6dc357
+modified: 1739199693919
+created: 1739199693919
+url: "{{ _.base_url }}/{{ _.workspace }}/services"
+name: Create a new Service in a workspace
+description: Create a new Service in a workspace
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "my-service",
+      "retries": 5,
+      "protocol": "http",
+      "host": "example.com",
+      "port": 80,
+      "path": "/some_api",
+      "connect_timeout": 6000,
+      "write_timeout": 6000,
+      "read_timeout": 6000,
+      "tags": [
+        "user-level"
+      ],
+      "client_certificate": {
+        "id": "4e3ad2e4-0bc4-4638-8e34-c84a417ba39b"
+      },
+      "tls_verify": true,
+      "tls_verify_depth": "respected",
+      "ca_certificates": [
+        "4e3ad2e4-0bc4-4638-8e34-c84a417ba39b"
+      ],
+      "enabled": true
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693919
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,29 @@
+_id: req_ed415b16454747cba90a7e15ab3d04ad
+type: Request
+parentId: fld_5eede782f0b543c2a9960b80c406f536
+modified: 1739199693877
+created: 1739199693877
+url: "{{ _.base_url }}/ca_certificates/{{ _.ca_certificate_id }}"
+name: Fetch a CA Certificate
+description: Retrieve details about the specified Certificate Authority (CA)
+  certificate using the provided path parameter `ca_certificate_id`.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693877
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

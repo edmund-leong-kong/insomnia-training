@@ -1,0 +1,29 @@
+_id: req_3f021d89d04c4854a8201c7356ea609c
+type: Request
+parentId: fld_06a43b6bbab94c41aeefd2c56161e734
+modified: 1739199693934
+created: 1739199693934
+url: "{{ _.base_url }}/{{ _.workspace }}/consumer_groups/{{ _.group_name_or_id }}"
+name: List a specific consumer group
+description: Returns a consumer group by passing either the `group_name` or
+  `group_id` as a path parameter.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693934
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

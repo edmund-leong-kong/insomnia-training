@@ -1,0 +1,55 @@
+_id: req_205c69b66411484c96ddea0ea8fc55b5
+type: Request
+parentId: fld_b280d58e241e4f1e84e9abcbe9518632
+modified: 1739199693885
+created: 1739199693885
+url: "{{ _.base_url }}/key-sets/{{ _.key-set_id_or_name }}"
+name: Update a Key Set
+description: >-
+  Update a Key Set using ID or name.
+
+
+  Note: This API is not available in DB-less mode.
+
+
+  Inserts (or replaces) the Key Set under the requested resource with the definition specified in the body. The Key Set will be identified via the name or id attribute.
+
+
+  When the name or id attribute has the structure of a UUID, the Key Set being inserted/replaced will be identified by its id. Otherwise it will be identified by its name.
+
+
+  When creating a new Key Set without specifying id (neither in the URL nor in the body), then it will be auto-generated.
+
+
+  Notice that specifying a name in the URL and a different one in the request body is not allowed.
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "my-key_set",
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693885
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

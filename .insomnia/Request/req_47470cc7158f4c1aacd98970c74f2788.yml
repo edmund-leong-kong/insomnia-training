@@ -1,0 +1,35 @@
+_id: req_47470cc7158f4c1aacd98970c74f2788
+type: Request
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693944
+created: 1739199693944
+url: "{{ _.base_url }}/tags"
+name: List all tags
+description: >-
+  Returns a paginated list of all the tags in the system.
+
+
+  The list of entities isn't restricted to a single entity type. All the entities tagged with tags are present in this list.
+
+
+  If an entity is tagged with more than one tag, the `entity_id` for that entity appears more than once in the resulting list. Similarly, if several entities have been tagged with the same tag, the tag appears in several items of this list.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693944
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

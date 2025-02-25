@@ -1,0 +1,15 @@
+_id: fld_68aa1935818245ddbed46960e5fe031e
+type: RequestGroup
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739374687549
+created: 1739199693873
+name: debug
+description: |
+  Debug Routes
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1739199693873
+preRequestScript: null
+afterResponseScript: null
+authentication: null
+headers: null

@@ -1,0 +1,38 @@
+_id: req_4a22984dcc8f4885b5d1d948a6c2fbe3
+type: Request
+parentId: fld_6cd2d255569349e1becef3a1201ef7a7
+modified: 1739199693946
+created: 1739199693946
+url: "{{ _.base_url }}/admins/password_resets"
+name: Reset an Admin’s Password
+description: Reset an admin's password.
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "email": "string",
+      "password": "string",
+      "token": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693946
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

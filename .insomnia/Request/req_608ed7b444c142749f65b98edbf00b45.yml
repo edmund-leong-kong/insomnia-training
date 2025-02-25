@@ -1,0 +1,28 @@
+_id: req_608ed7b444c142749f65b98edbf00b45
+type: Request
+parentId: fld_ee8b35e4ae8c49a6b9cd66aa8de881ba
+modified: 1739199693940
+created: 1739199693940
+url: "{{ _.base_url }}/licenses/{{ _.license-id }}"
+name: Delete a license
+description: Delete a license by passing the license ID as a path parameter.
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693940
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,16 @@
+_id: fld_9ccb737cf92e41d0b1651719c2209316
+type: RequestGroup
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693874
+created: 1739199693874
+name: clustering
+description: >
+  Retrieve information about the status of data planes when Kong Gateway is
+  running in hybrid mode.
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1739199693874
+preRequestScript: null
+afterResponseScript: null
+authentication: null
+headers: null

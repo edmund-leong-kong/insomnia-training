@@ -1,0 +1,30 @@
+_id: req_880a4b9e92ce4c0688ab8a40a45bb70f
+type: Request
+parentId: fld_6a937d1db9344ae483e2150c4d84e5cc
+modified: 1739199693941
+created: 1739199693941
+url: "{{ _.base_url }}/{{ _.endpoint }}"
+name: List method by endpoint
+description: >
+  List all the supported HTTP methods by an endpoint. This can also be used with
+  a CORS preflight request.
+method: OPTIONS
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693941
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

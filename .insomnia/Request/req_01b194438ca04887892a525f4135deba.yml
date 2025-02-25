@@ -1,0 +1,30 @@
+_id: req_01b194438ca04887892a525f4135deba
+type: Request
+parentId: fld_9ee4ae8eb4b0473e82cf6f4fe0c06595
+modified: 1739199693926
+created: 1739199693926
+url: "{{ _.base_url }}/{{ _.workspace }}/upstreams/{{ _.upstream_id_or_name
+  }}/targets/{{ _.target_id_or_target }}"
+name: Delete a Target associated with a an Upstream in a workspace
+description: Delete a Target associated with a an Upstream using ID or target in
+  a workspace.
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693926
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

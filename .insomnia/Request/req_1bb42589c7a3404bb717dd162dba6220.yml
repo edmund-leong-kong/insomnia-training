@@ -1,0 +1,37 @@
+_id: req_1bb42589c7a3404bb717dd162dba6220
+type: Request
+parentId: fld_557e860c51744c6a99196dc1bce1337c
+modified: 1739199693897
+created: 1739199693897
+url: "{{ _.base_url }}/snis"
+name: List all SNIs
+description: List all SNIs
+method: GET
+body: {}
+parameters:
+  - name: size
+    disabled: true
+    value: "100"
+  - name: offset
+    disabled: true
+    value: string
+  - name: tags
+    disabled: true
+    value: string
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693897
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

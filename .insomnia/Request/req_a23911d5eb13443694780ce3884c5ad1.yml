@@ -1,0 +1,28 @@
+_id: req_a23911d5eb13443694780ce3884c5ad1
+type: Request
+parentId: fld_557e860c51744c6a99196dc1bce1337c
+modified: 1739199693897
+created: 1739199693897
+url: "{{ _.base_url }}/snis/{{ _.sni_name_or_id }}"
+name: Delete an SNI
+description: Delete an SNI
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693897
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

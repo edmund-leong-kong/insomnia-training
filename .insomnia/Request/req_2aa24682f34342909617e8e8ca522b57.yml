@@ -1,0 +1,40 @@
+_id: req_2aa24682f34342909617e8e8ca522b57
+type: Request
+parentId: fld_e43d019135f14886b967edd600ddacab
+modified: 1739199693910
+created: 1739199693910
+url: "{{ _.base_url }}/{{ _.workspace }}/consumers/{{ _.consumer_username_or_id }}"
+name: Update a Consumer in a workspace
+description: Update a Consumer in a workspace
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "username": "string",
+      "custom_id": "string",
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693910
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,28 @@
+_id: req_edc3057599d04902b762d5eaedcdeb62
+type: Request
+parentId: fld_e43d019135f14886b967edd600ddacab
+modified: 1739199693909
+created: 1739199693909
+url: "{{ _.base_url }}/{{ _.workspace }}/consumers/{{ _.consumer_username_or_id }}"
+name: Fetch a Consumer in a workspace
+description: Get a Consumer using ID or username in a workspace.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693909
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,32 @@
+_id: req_e7934a915a1248f4be5d2d18e4d6ad57
+type: Request
+parentId: fld_6a937d1db9344ae483e2150c4d84e5cc
+modified: 1739199693875
+created: 1739199693875
+url: "{{ _.base_url }}/"
+name: Get Kong's instance information
+description: >
+  Returns detailed information about the Kong gateway instance, including the
+  full Kong configuration, available and unavailable plugins, version, edition
+  (enterprise or community), a tagline, the unique node identifier, and other
+  metadata.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693875
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,37 @@
+_id: req_71a6016430c3487792d8e675c6edf1c0
+type: Request
+parentId: fld_fccafe65788a4cd7862c5ec834bcc589
+modified: 1739199693902
+created: 1739199693902
+url: "{{ _.base_url }}/vaults"
+name: List all Vaults
+description: List all Vaults
+method: GET
+body: {}
+parameters:
+  - name: size
+    disabled: true
+    value: "100"
+  - name: offset
+    disabled: true
+    value: string
+  - name: tags
+    disabled: true
+    value: string
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693902
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

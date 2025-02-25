@@ -1,0 +1,28 @@
+_id: req_793cb8a7131b4cefaeafa2115bbb97a0
+type: Request
+parentId: fld_8ab0a0f289094a8f9a098721d04bc976
+modified: 1739199693913
+created: 1739199693913
+url: "{{ _.base_url }}/{{ _.workspace }}/keys/{{ _.key_id_or_name }}"
+name: Delete a Key in a workspace
+description: Delete a Key in a workspace
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693913
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,40 @@
+_id: req_6f5fc5e3501042d187d168ddbf957a17
+type: Request
+parentId: fld_86647cee48074f6d862ca219e5600924
+modified: 1739199693959
+created: 1739199693959
+url: "{{ _.base_url }}/event-hooks/sources"
+name: List all sources
+description: >
+  Sources are the actions that trigger the event hook. The `/sources` JSON
+  output follows the following pattern:
+
+
+  * 1st level = The source, which is the action that triggers the event hook.
+
+  * 2nd level = The event, which is the Kong entity the event hook listens to for events.
+
+  * 3rd level = The available template parameters for use in `webhook-custom` payloads.
+
+
+  For instance, in the example below `balancer` is the source, `health` is the event, and `upstream_id`, `ip`, `port`, `hostname`, and `health` are the available template parameters.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693959
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

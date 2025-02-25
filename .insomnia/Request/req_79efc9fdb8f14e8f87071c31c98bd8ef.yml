@@ -1,0 +1,42 @@
+_id: req_79efc9fdb8f14e8f87071c31c98bd8ef
+type: Request
+parentId: fld_ee8b35e4ae8c49a6b9cd66aa8de881ba
+modified: 1739199693939
+created: 1739199693939
+url: "{{ _.base_url }}/licenses"
+name: Add a license
+description: >-
+  Create a license using an auto-generated UUID. When using `POST`, if the
+  request payload does contain a valid Kong Gateway license, the license will be
+  added.
+
+
+  If the request payload does not contain a valid licence, a `400 BAD REQUEST` will be returned.
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+      "payload": "{\\\"license\\\":{\\\"payload\\\":{\\\"admin_seats\\\":\\\"1\\\",\\\"customer\\\":\\\"Example Company, Inc\\\",\\\"dataplanes\\\":\\\"1\\\",\\\"license_creation_date\\\":\\\"2017-07-20\\\",\\\"license_expiration_date\\\":\\\"2017-07-20\\\",\\\"license_key\\\":\\\"00141000017ODj3AAG_a1V41000004wT0OEAU\\\",\\\"product_subscription\\\":\\\"Konnect Enterprise\\\",\\\"support_plan\\\":\\\"None\\\"},\\\"signature\\\":\\\"6985968131533a967fcc721244a979948b1066967f1e9cd65dbd8eeabe060fc32d894a2945f5e4a03c1cd2198c74e058ac63d28b045c2f1fcec95877bd790e1b\\\",\\\"version\\\":\\\"1\\\"}}"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693939
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,30 @@
+_id: req_1106d2c98112457cb3738b307dae8809
+type: Request
+parentId: fld_ff2e19ae806c4912bdfa2bc586afaf2a
+modified: 1739199693963
+created: 1739199693963
+url: "{{ _.base_url }}/cache/{{ _.key }}"
+name: Invalidate cache by key
+description: >
+  Invalidate the cache for a specific key in both `kong.cache` and
+  `kong.core_cache`.
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693963
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

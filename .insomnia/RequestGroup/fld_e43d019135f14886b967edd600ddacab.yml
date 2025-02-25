@@ -1,0 +1,17 @@
+_id: fld_e43d019135f14886b967edd600ddacab
+type: RequestGroup
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693870
+created: 1739199693870
+name: Consumers
+description: >
+  The consumer object represents a consumer - or a user - of a service. 
+
+  You can either rely on Kong Gateway as the primary datastore, or you can map the consumer list with your database to keep consistency between Kong Gateway and your existing primary datastore.
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1739199693870
+preRequestScript: null
+afterResponseScript: null
+authentication: null
+headers: null

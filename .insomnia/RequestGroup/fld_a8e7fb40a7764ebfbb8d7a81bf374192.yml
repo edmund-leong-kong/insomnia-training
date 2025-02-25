@@ -1,0 +1,26 @@
+_id: fld_a8e7fb40a7764ebfbb8d7a81bf374192
+type: RequestGroup
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693870
+created: 1739199693870
+name: Certificates
+description: >
+  A certificate object represents a public certificate, and can be optionally
+  paired with the corresponding private key. These objects are used by Kong
+  Gateway to handle SSL/TLS termination for encrypted requests, or for use as a
+  trusted CA store when validating peer certificate of client/service. 
+
+  <br><br>
+
+  Certificates are optionally associated with SNI objects to tie a cert/key pair to one or more hostnames. 
+
+  <br><br>
+
+  If intermediate certificates are required in addition to the main certificate, they should be concatenated together into one string.
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1739199693870
+preRequestScript: null
+afterResponseScript: null
+authentication: null
+headers: null

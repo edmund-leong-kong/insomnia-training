@@ -1,0 +1,44 @@
+_id: req_0a0c308218394f0fb21490887ec8e54b
+type: Request
+parentId: fld_91301b69ec5b45be800a959f65fcc89f
+modified: 1739199693942
+created: 1739199693942
+url: "{{ _.base_url }}/keyring/generate"
+name: Generate key
+description: >-
+  Generate key material.
+
+
+  Kong supports rotating keys by allowing for multiple keys to exist on the keyring at the same time. This allows for data fields written by one key to be read back, while a fresher encryption key is used for write operations. Rotating keys is a matter of importing or generating a new key into the keyring, and marking it as active.
+
+  '401': 
+    $ref: '#/components/responses/HTTP401Error'
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "key": "t6NWgbj3g9cbNVC3/D6oZ2Md1Br5gWtRrqb1T2FZy44=",
+      "id": "8zgITLQh"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693942
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

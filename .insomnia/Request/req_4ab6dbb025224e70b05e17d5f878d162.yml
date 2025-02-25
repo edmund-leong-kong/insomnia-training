@@ -1,0 +1,42 @@
+_id: req_4ab6dbb025224e70b05e17d5f878d162
+type: Request
+parentId: fld_557e860c51744c6a99196dc1bce1337c
+modified: 1739199693923
+created: 1739199693923
+url: "{{ _.base_url }}/{{ _.workspace }}/snis"
+name: Create a new SNI in a workspace
+description: Create a new SNI in a workspace
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "my-sni",
+      "tags": [
+        "[\"user-level\", \"low-priority\"]"
+      ],
+      "certificate": {
+        "id": "91020192-062d-416f-a275-9addeeaffaf2"
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693923
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

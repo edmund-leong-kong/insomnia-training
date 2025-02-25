@@ -1,0 +1,29 @@
+_id: req_7471ab2ca9ee4537945420761ad3d16b
+type: Request
+parentId: fld_ee8b35e4ae8c49a6b9cd66aa8de881ba
+modified: 1739199693961
+created: 1739199693961
+url: "{{ _.base_url }}/fips-status"
+name: FIPS Mode Status
+description: "Retrieves the current FIPS mode status. This endpoint indicates
+  whether FIPS mode is active and provides the version of the FIPS module. "
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693961
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

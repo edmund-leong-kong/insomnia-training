@@ -1,0 +1,28 @@
+_id: req_3ba0ee117d7c4b51900e9d1b5b80cf07
+type: Request
+parentId: fld_557e860c51744c6a99196dc1bce1337c
+modified: 1739199693923
+created: 1739199693923
+url: "{{ _.base_url }}/{{ _.workspace }}/snis/{{ _.sni_name_or_id }}"
+name: Delete an SNI in a workspace
+description: Delete an SNI in a workspace
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693923
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

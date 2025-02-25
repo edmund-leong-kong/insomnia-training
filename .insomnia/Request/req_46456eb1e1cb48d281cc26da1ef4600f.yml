@@ -1,0 +1,42 @@
+_id: req_46456eb1e1cb48d281cc26da1ef4600f
+type: Request
+parentId: fld_557e860c51744c6a99196dc1bce1337c
+modified: 1739199693898
+created: 1739199693898
+url: "{{ _.base_url }}/snis/{{ _.sni_name_or_id }}"
+name: Update an SNI
+description: Update an SNI
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "my-sni",
+      "tags": [
+        "[\"user-level\", \"low-priority\"]"
+      ],
+      "certificate": {
+        "id": "91020192-062d-416f-a275-9addeeaffaf2"
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693898
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

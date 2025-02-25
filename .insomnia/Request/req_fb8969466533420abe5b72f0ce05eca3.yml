@@ -1,0 +1,35 @@
+_id: req_fb8969466533420abe5b72f0ce05eca3
+type: Request
+parentId: fld_06a43b6bbab94c41aeefd2c56161e734
+modified: 1739199693930
+created: 1739199693930
+url: "{{ _.base_url }}/consumers/{{ _.consumer_username_or_id }}/consumer_groups"
+name: List consumer groups for a consumer
+description: |
+  View all consumer groups that a consumer is assigned to.
+method: GET
+body: {}
+parameters:
+  - name: offset
+    disabled: true
+    value: string
+  - name: size
+    disabled: true
+    value: "100"
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693930
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

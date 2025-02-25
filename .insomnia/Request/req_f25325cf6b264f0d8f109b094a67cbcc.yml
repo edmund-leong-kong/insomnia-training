@@ -1,0 +1,29 @@
+_id: req_f25325cf6b264f0d8f109b094a67cbcc
+type: Request
+parentId: fld_ee8b35e4ae8c49a6b9cd66aa8de881ba
+modified: 1739199693940
+created: 1739199693940
+url: "{{ _.base_url }}/license/report"
+name: Generate a report
+description: |
+  Generate a report on the Kong Gateway instance to gather monthly usage data.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693940
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

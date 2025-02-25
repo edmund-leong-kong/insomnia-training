@@ -1,0 +1,40 @@
+_id: req_3c2894cfad3040e596a12dad2d15edc6
+type: Request
+parentId: fld_e43d019135f14886b967edd600ddacab
+modified: 1739199693881
+created: 1739199693881
+url: "{{ _.base_url }}/consumers"
+name: Create a new Consumer
+description: Create a new Consumer
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "username": "string",
+      "custom_id": "string",
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693881
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,29 @@
+_id: req_ed5f83f4e4294afbaaf78f2db5af20ed
+type: Request
+parentId: fld_7d2b7272ce894c4ca1d7bd38930e93c1
+modified: 1739199693921
+created: 1739199693921
+url: "{{ _.base_url }}/{{ _.workspace }}/services/{{ _.service_id_or_name
+  }}/plugins/{{ _.plugin_id }}"
+name: Fetch a plugin associated with a Service in a workspace
+description: Get a plugin associated with a Service using ID in a workspace.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693921
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

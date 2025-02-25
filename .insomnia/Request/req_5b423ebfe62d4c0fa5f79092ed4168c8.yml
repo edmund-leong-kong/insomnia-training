@@ -1,0 +1,43 @@
+_id: req_5b423ebfe62d4c0fa5f79092ed4168c8
+type: Request
+parentId: fld_5eede782f0b543c2a9960b80c406f536
+modified: 1739199693877
+created: 1739199693877
+url: "{{ _.base_url }}/ca_certificates/{{ _.ca_certificate_id }}"
+name: Upsert a CA Certificate
+description: Update the specified Certificate Authority (CA) certificate using
+  the provided `ca_certificate_id`. Use this endpoint to modify an existing CA
+  certificate in the system. The request body should include the fields of the
+  CA certificate that need to be updated.
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "cert": "\"-----BEGIN CERTIFICATE-----...\"",
+      "cert_digest": "c641e28d77e93544f2fa87b2cf3f3d51...",
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693877
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,36 @@
+_id: fld_99ed48b72cff443692ac6702d7ea380f
+type: RequestGroup
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693873
+created: 1739199693873
+name: RBAC
+description: >
+  Kong Gateway's RBAC feature is configurable through Kong's Admin API or using
+  Kong Manager.
+
+  <br><br>
+
+  There are four basic entities involving RBAC:
+
+  <br><br>
+
+  * User: The entity interacting with the system. Can be associated with zero, one, or more roles. For example: The user `bob` has the token `1234`.
+
+  * Role: Set of permissions (`role_endpoint` and `role_entity`). Has a name and can be associated with zero, one, or more permissions. For example: The user `bob` is associated with the role `developer`.
+
+  * `role_source`: The origin of the RBAC user role. Specifies where the user role is defined, either locally or through an identity provider (IdP).
+
+  * `role_endpoint`: A set of enabled or disabled actions. For example: The role `developer` has one `role_endpoint` and reads and writes to `/routes`.
+
+  * `role_entity`: A set of enabled or disabled actions. For example: The role `developer` has one `role_entity` attached to a UUID.
+
+  For the admin role in the default workspace, CRUD actions on /groups and /groups/* endpoints are disallowed. 
+
+  For the workspace-admin role in non-default workspaces, CRUD actions on /groups and /groups/* endpoints are disallowed.
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1739199693873
+preRequestScript: null
+afterResponseScript: null
+authentication: null
+headers: null

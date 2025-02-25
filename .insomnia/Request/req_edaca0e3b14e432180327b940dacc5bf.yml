@@ -1,0 +1,30 @@
+_id: req_edaca0e3b14e432180327b940dacc5bf
+type: Request
+parentId: fld_9ccb737cf92e41d0b1651719c2209316
+modified: 1739199693962
+created: 1739199693962
+url: "{{ _.base_url }}/clustering/data-planes"
+name: Retrieve connected data planes
+description: >
+  Retrieve a list of all data planes connected to the control plane. This
+  endpoint is only accessible when Kong Gateway is running in hybrid mode.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693962
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

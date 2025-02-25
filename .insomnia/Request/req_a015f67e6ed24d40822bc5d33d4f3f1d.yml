@@ -1,0 +1,28 @@
+_id: req_a015f67e6ed24d40822bc5d33d4f3f1d
+type: Request
+parentId: fld_99ed48b72cff443692ac6702d7ea380f
+modified: 1739199693955
+created: 1739199693955
+url: "{{ _.base_url }}/rbac/users/{{ _.name_or_id }}/roles"
+name: Delete a Role from a User
+description: Delete a Role from a User
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693955
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

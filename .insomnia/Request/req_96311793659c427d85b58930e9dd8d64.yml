@@ -1,0 +1,37 @@
+_id: req_96311793659c427d85b58930e9dd8d64
+type: Request
+parentId: fld_7d2b7272ce894c4ca1d7bd38930e93c1
+modified: 1739199693890
+created: 1739199693890
+url: "{{ _.base_url }}/routes/{{ _.route_id_or_name }}/plugins"
+name: List all plugins associated with a route
+description: List all plugins associated with a route
+method: GET
+body: {}
+parameters:
+  - name: size
+    disabled: true
+    value: "100"
+  - name: offset
+    disabled: true
+    value: string
+  - name: tags
+    disabled: true
+    value: string
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693890
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

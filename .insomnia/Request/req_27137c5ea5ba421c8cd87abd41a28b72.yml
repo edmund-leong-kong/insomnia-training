@@ -1,0 +1,49 @@
+_id: req_27137c5ea5ba421c8cd87abd41a28b72
+type: Request
+parentId: fld_8ab0a0f289094a8f9a098721d04bc976
+modified: 1739199693886
+created: 1739199693886
+url: "{{ _.base_url }}/keys/{{ _.key_id_or_name }}"
+name: Upsert a Key
+description: |
+  Create or update a key using ID or name.
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "set": {
+        "id": "string"
+      },
+      "name": "my-key",
+      "kid": "42",
+      "jwk": "{\\\"alg\\\":\\\"RSA\\\",  \\\"kid\\\": \\\"42\\\",  ...}",
+      "pem": {
+        "private_key": "private_key\": \"-----BEGIN",
+        "public_key": "public_key\": \"-----BEGIN"
+      },
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693886
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

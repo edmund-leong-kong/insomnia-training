@@ -1,0 +1,37 @@
+_id: req_4ab60ec7e24849e792217a38fb238d9c
+type: Request
+parentId: fld_6a937d1db9344ae483e2150c4d84e5cc
+modified: 1739199693942
+created: 1739199693942
+url: "{{ _.base_url }}/status"
+name: Health Routes
+description: >-
+  Retrieve usage information about a node, with some basic information about the
+  connections being processed by the underlying nginx process, the status of the
+  database connection, and node's memory usage.
+
+
+  `status_listen` listens on port `8007` by default, however `8001` can be used for status checks as well. The status endpoint provides detailed metrics regarding memory usage, worker process stats, database connection status, and server connection metrics.
+
+
+  If you want to monitor the Kong process, since Kong is built on top of nginx, every existing nginx monitoring tool or agent can be used.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693942
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

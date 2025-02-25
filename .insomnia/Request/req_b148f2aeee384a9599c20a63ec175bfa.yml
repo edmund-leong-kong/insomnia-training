@@ -1,0 +1,28 @@
+_id: req_b148f2aeee384a9599c20a63ec175bfa
+type: Request
+parentId: fld_6cd2d255569349e1becef3a1201ef7a7
+modified: 1739199693947
+created: 1739199693947
+url: "{{ _.base_url }}/admins/{{ _.name_or_id }}/workspaces"
+name: List an Admin’s Workspaces
+description: Return workspaces associated with an admin.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693947
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

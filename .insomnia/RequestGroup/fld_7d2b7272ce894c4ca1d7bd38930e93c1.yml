@@ -1,0 +1,36 @@
+_id: fld_7d2b7272ce894c4ca1d7bd38930e93c1
+type: RequestGroup
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693870
+created: 1739199693870
+name: Plugins
+description: >
+  A plugin entity represents a plugin configuration that will be executed during
+  the HTTP request/response lifecycle. Plugins let you add functionality to
+  services that run behind a Kong Gateway instance, like authentication or rate
+  limiting.
+
+  You can find more information about available plugins and which values each plugin accepts at the [Plugin Hub](https://docs.konghq.com/hub/).
+
+  <br><br>
+
+  When adding a plugin configuration to a service, the plugin will run on every request made by a client to that service. If a plugin needs to be tuned to different values for some specific consumers, you can do so by creating a separate plugin instance that specifies both the service and the consumer, through the service and consumer fields.
+
+  <br><br>
+
+  Plugins can be both [tagged and filtered by tags](https://docs.konghq.com/gateway/latest/admin-api/#tags).
+
+  <br><br>
+    **Bracket syntax for keys with periods:**
+    When submitting form data, keys that contain dots (e.g., `service.name`) should be enclosed in square brackets to avoid ambiguity:
+    
+    - Example: `config.resource_attributes[service.name]=kong-dev`
+    
+    - If necessary, URL encode the square brackets: `%5Bservice.name%5D`.
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1739199693870
+preRequestScript: null
+afterResponseScript: null
+authentication: null
+headers: null

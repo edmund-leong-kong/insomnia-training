@@ -1,0 +1,38 @@
+_id: req_12f84864cc5a479686f0765c1b4e6955
+type: Request
+parentId: fld_7d2b7272ce894c4ca1d7bd38930e93c1
+modified: 1739199693910
+created: 1739199693910
+url: "{{ _.base_url }}/{{ _.workspace }}/consumers/{{ _.consumer_username_or_id
+  }}/plugins"
+name: List all plugins associated with a Consumer in a workspace
+description: List all plugins associated with a Consumer in a workspace
+method: GET
+body: {}
+parameters:
+  - name: size
+    disabled: true
+    value: "100"
+  - name: offset
+    disabled: true
+    value: string
+  - name: tags
+    disabled: true
+    value: string
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693910
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

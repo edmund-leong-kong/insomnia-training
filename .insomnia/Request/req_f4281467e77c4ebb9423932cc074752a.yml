@@ -1,0 +1,65 @@
+_id: req_f4281467e77c4ebb9423932cc074752a
+type: Request
+parentId: fld_99ed48b72cff443692ac6702d7ea380f
+modified: 1739199693952
+created: 1739199693952
+url: "{{ _.base_url }}/rbac/roles/{{ _.name_or_id }}/endpoints"
+name: Add a Role Endpoint Permission
+description: >-
+  Add a role endpoint permission for the path of the associated endpoint.
+  Permissions can be exact matches, or contain wildcards, represented by `*`.
+
+
+  Exact matches:
+
+  - `/services/`
+
+  - `/services/foo`
+
+
+  Wildcards:
+
+  - `/services/*`
+
+  - `/services/*/plugins`
+
+  Where `*` replaces exactly one segment between slashes (or the end of the path).
+
+
+  Note that wildcards can be nested. For example, `/rbac/*`, `/rbac/*/*`, `/rbac/*/*/*` would refer to all paths under `/rbac/`.
+
+  <br><br>
+   For the `admin` role in the default workspace, CRUD actions on `/groups` and `/groups/*` endpoints are disallowed.
+   For the `workspace-admin` role in non-default workspaces, CRUD actions on `/groups` and `/groups/*` endpoints are disallowed.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "workspace": "string",
+      "endpoint": "string",
+      "negative": "string",
+      "actions": "string",
+      "comment": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693952
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

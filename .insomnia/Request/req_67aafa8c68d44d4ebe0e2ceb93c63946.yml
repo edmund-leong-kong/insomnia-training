@@ -1,0 +1,28 @@
+_id: req_67aafa8c68d44d4ebe0e2ceb93c63946
+type: Request
+parentId: fld_b280d58e241e4f1e84e9abcbe9518632
+modified: 1739199693912
+created: 1739199693912
+url: "{{ _.base_url }}/{{ _.workspace }}/key-sets/{{ _.key-set_id_or_name }}"
+name: Fetch a Key Set in a workspace
+description: Get a Key Set using ID or name in a workspace.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693912
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

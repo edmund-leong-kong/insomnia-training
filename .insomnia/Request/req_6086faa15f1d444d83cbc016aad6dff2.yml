@@ -1,0 +1,28 @@
+_id: req_6086faa15f1d444d83cbc016aad6dff2
+type: Request
+parentId: fld_0a2cb143ba8448a6b61d34651925da2c
+modified: 1739199693947
+created: 1739199693947
+url: "{{ _.base_url }}/groups"
+name: List Groups
+description: Returns a list of groups.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693947
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

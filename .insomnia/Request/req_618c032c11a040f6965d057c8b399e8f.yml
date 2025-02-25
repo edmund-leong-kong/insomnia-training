@@ -1,0 +1,28 @@
+_id: req_618c032c11a040f6965d057c8b399e8f
+type: Request
+parentId: fld_8b030fa7a20a4d2a931a9ac88e6dc357
+modified: 1739199693919
+created: 1739199693919
+url: "{{ _.base_url }}/{{ _.workspace }}/services/{{ _.service_id_or_name }}"
+name: Fetch a Service in a workspace
+description: Get a Service using ID or name in a workspace.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693919
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

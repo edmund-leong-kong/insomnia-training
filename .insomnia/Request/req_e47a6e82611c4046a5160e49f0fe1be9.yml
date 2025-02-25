@@ -1,0 +1,28 @@
+_id: req_e47a6e82611c4046a5160e49f0fe1be9
+type: Request
+parentId: fld_a8e7fb40a7764ebfbb8d7a81bf374192
+modified: 1739199693906
+created: 1739199693906
+url: "{{ _.base_url }}/{{ _.workspace }}/certificates/{{ _.certificate_id }}"
+name: Delete a Certificate in a workspace
+description: Delete a Certificate in a workspace
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693906
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

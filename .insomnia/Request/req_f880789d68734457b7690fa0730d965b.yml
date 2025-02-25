@@ -1,0 +1,44 @@
+_id: req_f880789d68734457b7690fa0730d965b
+type: Request
+parentId: fld_99ed48b72cff443692ac6702d7ea380f
+modified: 1739199693953
+created: 1739199693953
+url: "{{ _.base_url }}/rbac/roles/{{ _.name_or_id }}/entities"
+name: Add a Role Entity Permission
+description: The `entity_id` must be the ID of an entity in Kong. If you provide
+  the ID of a workspace, the permission applies to all entities in that
+  workspace. Future entities belonging to that workspace will get the same
+  permissions. A wildcard (`*`) will be interpreted as all entities in the
+  system.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "negative": "string",
+      "entity_id": "string",
+      "entity_type": "string",
+      "actions": "string",
+      "comment": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693953
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

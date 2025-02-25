@@ -1,0 +1,28 @@
+_id: req_c36d43e0520b4b09947893dd4274ebc5
+type: Request
+parentId: fld_0a2cb143ba8448a6b61d34651925da2c
+modified: 1739199693948
+created: 1739199693948
+url: "{{ _.base_url }}/groups/{{ _.name_or_id }}"
+name: Delete an Group
+description: Delete a group by specifying the group's name or ID.
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693948
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

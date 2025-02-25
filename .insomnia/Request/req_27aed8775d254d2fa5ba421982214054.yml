@@ -1,0 +1,37 @@
+_id: req_27aed8775d254d2fa5ba421982214054
+type: Request
+parentId: fld_ae956d6bfd334432813ea715b2e23232
+modified: 1739199693924
+created: 1739199693924
+url: "{{ _.base_url }}/{{ _.workspace }}/upstreams"
+name: List all Upstreams in a workspace
+description: List all Upstreams in a workspace
+method: GET
+body: {}
+parameters:
+  - name: size
+    disabled: true
+    value: "100"
+  - name: offset
+    disabled: true
+    value: string
+  - name: tags
+    disabled: true
+    value: string
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693924
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

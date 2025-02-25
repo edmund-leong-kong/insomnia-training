@@ -1,0 +1,15 @@
+_id: fld_6cd2d255569349e1becef3a1201ef7a7
+type: RequestGroup
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693873
+created: 1739199693873
+name: admins
+description: |
+  Admin routes
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1739199693873
+preRequestScript: null
+afterResponseScript: null
+authentication: null
+headers: null

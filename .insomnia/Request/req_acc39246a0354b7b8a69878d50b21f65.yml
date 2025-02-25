@@ -1,0 +1,44 @@
+_id: req_acc39246a0354b7b8a69878d50b21f65
+type: Request
+parentId: fld_fccafe65788a4cd7862c5ec834bcc589
+modified: 1739199693903
+created: 1739199693903
+url: "{{ _.base_url }}/vaults/{{ _.vault_id_or_prefix }}"
+name: Upsert a Vault
+description: Create or Update Vault using ID or prefix.
+method: PUT
+body:
+  mimeType: application/json
+  text: >-
+    {
+      "prefix": "env",
+      "name": "env",
+      "description": "This vault is used to retrieve Redis database access credentials.",
+      "config": {
+        "prefix": "SSL_"
+      },
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693903
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

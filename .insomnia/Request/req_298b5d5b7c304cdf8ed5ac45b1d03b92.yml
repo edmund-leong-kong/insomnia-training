@@ -1,0 +1,29 @@
+_id: req_298b5d5b7c304cdf8ed5ac45b1d03b92
+type: Request
+parentId: fld_6a937d1db9344ae483e2150c4d84e5cc
+modified: 1739199693942
+created: 1739199693942
+url: "{{ _.base_url }}/timers"
+name: Retrieve Runtime Debugging Info of Kong's Timers
+description: Retrieve runtime stats data from
+  [lua-resty-timer-ng](https://github.com/Kong/lua-resty-timer-ng).
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693942
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

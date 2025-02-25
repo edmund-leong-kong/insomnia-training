@@ -1,0 +1,28 @@
+_id: req_77928312cbad4026a4960b4f0cb05c62
+type: Request
+parentId: fld_a5ce5a96381142b8ba0917b84b76330a
+modified: 1739199693916
+created: 1739199693916
+url: "{{ _.base_url }}/{{ _.workspace }}/routes/{{ _.route_id_or_name }}"
+name: Delete a route in a workspace
+description: Delete a route in a workspace
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693916
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,30 @@
+_id: req_8817e729e3b94b6a9b47cf6e2475c770
+type: Request
+parentId: fld_86647cee48074f6d862ca219e5600924
+modified: 1739199693959
+created: 1739199693959
+url: "{{ _.base_url }}/event-hooks/sources/{{ _.source }}"
+name: List all events for a source
+description: Events are the Kong entities the event hook listens for events.
+  With this endpoint, you can list all of the events associated with a
+  particular source.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693959
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

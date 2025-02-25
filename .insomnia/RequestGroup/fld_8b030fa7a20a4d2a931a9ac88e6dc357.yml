@@ -1,0 +1,29 @@
+_id: fld_8b030fa7a20a4d2a931a9ac88e6dc357
+type: RequestGroup
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693869
+created: 1739199693869
+name: Services
+description: >
+  Service entities are abstractions of your microservice interfaces or formal
+  APIs. For example, a service could be a data transformation microservice or a
+  billing API.
+
+  <br><br>
+
+  The main attribute of a service is the destination URL for proxying traffic. This URL can be set as a single string or by specifying its protocol, host, port and path individually. 
+
+  <br><br>
+
+  Services are associated to routes, and a single service can have many routes associated with it. Routes are entrypoints in Kong Gateway which define rules to match client requests. Once a route is matched, Kong Gateway proxies the request to its associated service. See the [Proxy Reference](https://docs.konghq.com/gateway/latest/how-kong-works/routing-traffic/) for a detailed explanation of how Kong proxies traffic.
+
+  <br><br>
+
+  Services can be both [tagged and filtered by tags](https://docs.konghq.com/gateway/latest/admin-api/#tags).
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1739199693869
+preRequestScript: null
+afterResponseScript: null
+authentication: null
+headers: null

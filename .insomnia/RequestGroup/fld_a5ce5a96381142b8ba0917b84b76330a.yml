@@ -1,0 +1,61 @@
+_id: fld_a5ce5a96381142b8ba0917b84b76330a
+type: RequestGroup
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693869
+created: 1739199693869
+name: Routes
+description: >
+  Route entities define rules to match client requests. Each route is associated
+  with a service, and a service may have multiple routes associated to it. Every
+  request matching a given route will be proxied to the associated service. You
+  need at least one matching rule that applies to the protocol being matched by
+  the route.
+
+  <br><br>
+
+  The combination of routes and services, and the separation of concerns between them, offers a powerful routing mechanism with which it is possible to define fine-grained entrypoints in Kong Gateway leading to different upstream services of your infrastructure.
+
+  <br><br>
+
+  Depending on the protocol, one of the following attributes must be set:
+
+  <br>
+
+  * `http`: At least one of `methods`, `hosts`, `headers`, or `paths`
+
+  * `https`:  At least one of `methods`, `hosts`, `headers`, `paths`, or `snis`
+
+  *  `tcp`: At least one of `sources` or `destinations`
+
+  * `tls`: at least one of `sources`, `destinations`, or `snis`
+
+  * `tls_passthrough`: set `snis`
+
+  * `grpc`: At least one of `hosts`, `headers`, or `paths`
+
+  * `grpcs`: At least one of `hosts`, `headers`, `paths`, or `snis`
+
+  * `ws`: At least one of `hosts`, `headers`, or `paths`
+
+  * `wss`: At least one of `hosts`, `headers`, `paths`, or `snis` 
+
+  <br>
+
+
+  A route can't have both `tls` and `tls_passthrough` protocols at same time.
+
+  <br><br>
+
+
+  Learn more about the router: 
+
+  * [Configure routes using expressions](https://docs.konghq.com/gateway/latest/key-concepts/routes/expressions/)
+
+  * [Router Expressions language reference](https://docs.konghq.com/gateway/latest/reference/expressions-language/)
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1739199693869
+preRequestScript: null
+afterResponseScript: null
+authentication: null
+headers: null

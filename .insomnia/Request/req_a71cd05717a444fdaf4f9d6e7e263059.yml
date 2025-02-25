@@ -1,0 +1,39 @@
+_id: req_a71cd05717a444fdaf4f9d6e7e263059
+type: Request
+parentId: fld_ae956d6bfd334432813ea715b2e23232
+modified: 1739199693898
+created: 1739199693898
+url: "{{ _.base_url }}/upstreams"
+name: List all Upstreams
+description: >
+  List all registered upstreams. You can filter the results by pagination size,
+  offset, or tags like /upstreams?size=10&offset=0.
+method: GET
+body: {}
+parameters:
+  - name: size
+    disabled: true
+    value: "100"
+  - name: offset
+    disabled: true
+    value: string
+  - name: tags
+    disabled: true
+    value: string
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693898
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

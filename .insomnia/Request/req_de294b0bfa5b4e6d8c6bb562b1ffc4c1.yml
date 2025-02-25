@@ -1,0 +1,28 @@
+_id: req_de294b0bfa5b4e6d8c6bb562b1ffc4c1
+type: Request
+parentId: fld_a8e7fb40a7764ebfbb8d7a81bf374192
+modified: 1739199693906
+created: 1739199693906
+url: "{{ _.base_url }}/{{ _.workspace }}/certificates/{{ _.certificate_id }}"
+name: Fetch a Certificate in a workspace
+description: Get a Certificate using ID in a workspace.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693906
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

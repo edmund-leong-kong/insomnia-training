@@ -1,0 +1,28 @@
+_id: req_e93e40bb9c9f4ad7925886eada350a0d
+type: Request
+parentId: fld_e43d019135f14886b967edd600ddacab
+modified: 1739199693881
+created: 1739199693881
+url: "{{ _.base_url }}/consumers/{{ _.consumer_username_or_id }}"
+name: Delete a Consumer
+description: Delete a Consumer
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693881
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

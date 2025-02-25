@@ -1,0 +1,43 @@
+_id: req_ffdbcf0ad1fc4a15872304d76a9d317a
+type: Request
+parentId: fld_557e860c51744c6a99196dc1bce1337c
+modified: 1739199693908
+created: 1739199693908
+url: "{{ _.base_url }}/{{ _.workspace }}/certificates/{{ _.certificate_id
+  }}/snis/{{ _.sni_name_or_id }}"
+name: Update an SNI associated with a Certificate in a workspace
+description: Update a an SNI associated with a Certificate using ID or name in a workspace.
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "my-sni",
+      "tags": [
+        "[\"user-level\", \"low-priority\"]"
+      ],
+      "certificate": {
+        "id": "91020192-062d-416f-a275-9addeeaffaf2"
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693908
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

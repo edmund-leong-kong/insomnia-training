@@ -1,0 +1,28 @@
+_id: req_5d1c4d9e52a84ec1beb9a8dd071ead77
+type: Request
+parentId: fld_fccafe65788a4cd7862c5ec834bcc589
+modified: 1739199693928
+created: 1739199693928
+url: "{{ _.base_url }}/{{ _.workspace }}/vaults/{{ _.vault_id_or_prefix }}"
+name: Delete a Vault in a workspace
+description: Delete a Vault in a workspace
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693928
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

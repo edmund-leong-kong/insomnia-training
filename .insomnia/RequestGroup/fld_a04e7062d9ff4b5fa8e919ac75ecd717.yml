@@ -1,0 +1,20 @@
+_id: fld_a04e7062d9ff4b5fa8e919ac75ecd717
+type: RequestGroup
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693874
+created: 1739199693874
+name: audit-logs
+description: >
+  You can access request and database audit logs through the Admin API. The
+  default order of audit log is by request timestamp - latest to oldest.
+
+  <br><br>
+
+  For usage examples, see [Audit Logging in Kong Gateway](https://docs.konghq.com/gateway/latest/admin-api/audit-logs/).
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1739199693874
+preRequestScript: null
+afterResponseScript: null
+authentication: null
+headers: null

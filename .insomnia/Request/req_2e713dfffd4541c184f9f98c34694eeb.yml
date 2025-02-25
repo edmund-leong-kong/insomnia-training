@@ -1,0 +1,28 @@
+_id: req_2e713dfffd4541c184f9f98c34694eeb
+type: Request
+parentId: fld_86647cee48074f6d862ca219e5600924
+modified: 1739199693960
+created: 1739199693960
+url: "{{ _.base_url }}/event-hooks/{{ _.event-hook-id }}"
+name: Delete an event hook
+description: Deletes a specific event hook by its ID.
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693960
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

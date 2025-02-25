@@ -1,0 +1,48 @@
+_id: req_7401e26099b24e86b2e3285352ea2063
+type: Request
+parentId: fld_8ab0a0f289094a8f9a098721d04bc976
+modified: 1739199693914
+created: 1739199693914
+url: "{{ _.base_url }}/{{ _.workspace }}/keys/{{ _.key_id_or_name }}"
+name: Update a Key in a workspace
+description: Update a Key in a workspace
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "set": {
+        "id": "string"
+      },
+      "name": "my-key",
+      "kid": "42",
+      "jwk": "{\\\"alg\\\":\\\"RSA\\\",  \\\"kid\\\": \\\"42\\\",  ...}",
+      "pem": {
+        "private_key": "private_key\": \"-----BEGIN",
+        "public_key": "public_key\": \"-----BEGIN"
+      },
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693914
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

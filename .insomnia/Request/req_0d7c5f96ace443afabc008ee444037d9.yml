@@ -1,0 +1,29 @@
+_id: req_0d7c5f96ace443afabc008ee444037d9
+type: Request
+parentId: fld_7d2b7272ce894c4ca1d7bd38930e93c1
+modified: 1739199693920
+created: 1739199693920
+url: "{{ _.base_url }}/{{ _.workspace }}/services/{{ _.service_id_or_name
+  }}/plugins/{{ _.plugin_id }}"
+name: Delete a plugin associated with a Service in a workspace
+description: Delete a plugin associated with a Service using ID in a workspace.
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693920
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

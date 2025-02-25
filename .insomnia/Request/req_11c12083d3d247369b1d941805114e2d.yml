@@ -1,0 +1,38 @@
+_id: req_11c12083d3d247369b1d941805114e2d
+type: Request
+parentId: fld_7d2b7272ce894c4ca1d7bd38930e93c1
+modified: 1739199693920
+created: 1739199693920
+url: "{{ _.base_url }}/{{ _.workspace }}/services/{{ _.service_id_or_name
+  }}/plugins"
+name: List all plugins associated with a Service in a workspace
+description: List all plugins associated with a Service in a workspace
+method: GET
+body: {}
+parameters:
+  - name: size
+    disabled: true
+    value: "100"
+  - name: offset
+    disabled: true
+    value: string
+  - name: tags
+    disabled: true
+    value: string
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693920
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

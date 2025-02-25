@@ -1,0 +1,18 @@
+_id: fld_06a43b6bbab94c41aeefd2c56161e734
+type: RequestGroup
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693872
+created: 1739199693872
+name: consumer_groups
+description: >
+  Consumer groups enable the organization and categorization of consumers (users
+  or applications) within an API ecosystem. 
+
+  By grouping consumers together, you eliminate the need to manage them individually, providing a scalable, efficient approach to managing configurations.
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1739199693872
+preRequestScript: null
+afterResponseScript: null
+authentication: null
+headers: null

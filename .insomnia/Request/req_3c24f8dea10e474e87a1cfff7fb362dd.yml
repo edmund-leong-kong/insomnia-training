@@ -1,0 +1,41 @@
+_id: req_3c24f8dea10e474e87a1cfff7fb362dd
+type: Request
+parentId: fld_10d8bb4759194d23abf4e17aed82ea3d
+modified: 1739199693903
+created: 1739199693903
+url: "{{ _.base_url }}/workspaces"
+name: List all Workspaces
+description: >-
+  List all Workspaces
+
+
+  For workspace use cases and configuration examples, see [Workspace examples](https://docs.konghq.com/gateway/latest/kong-enterprise/workspaces/). This endpoint will only return workspaces that the current user has access to.
+method: GET
+body: {}
+parameters:
+  - name: size
+    disabled: true
+    value: "100"
+  - name: offset
+    disabled: true
+    value: string
+  - name: tags
+    disabled: true
+    value: string
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693903
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

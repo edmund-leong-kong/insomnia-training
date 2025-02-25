@@ -1,0 +1,44 @@
+_id: req_fbdc40a2ac614aa69b61541add151770
+type: Request
+parentId: fld_557e860c51744c6a99196dc1bce1337c
+modified: 1739199693879
+created: 1739199693879
+url: "{{ _.base_url }}/certificates/{{ _.certificate_name_or_id }}/snis"
+name: Create a new SNI associated with a Certificate
+description: Create a new SNI and associate it with a certificate in the system.
+  Use this endpoint to add a new SNI to the system and link it to a specific
+  certificate.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "my-sni",
+      "tags": [
+        "[\"user-level\", \"low-priority\"]"
+      ],
+      "certificate": {
+        "id": "91020192-062d-416f-a275-9addeeaffaf2"
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693879
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

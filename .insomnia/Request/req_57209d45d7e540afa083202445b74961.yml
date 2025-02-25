@@ -1,0 +1,36 @@
+_id: req_57209d45d7e540afa083202445b74961
+type: Request
+parentId: fld_10d8bb4759194d23abf4e17aed82ea3d
+modified: 1739199693961
+created: 1739199693961
+url: "{{ _.base_url }}/workspace_/groups/{{ _.groups }}"
+name: Update details of a specific group
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693961
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

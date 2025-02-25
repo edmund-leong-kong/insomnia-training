@@ -1,0 +1,17 @@
+_id: fld_8ab0a0f289094a8f9a098721d04bc976
+type: RequestGroup
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693871
+created: 1739199693871
+name: Keys
+description: >
+  A key object holds a representation of asymmetric keys in various formats.
+  When Kong Gateway or a Kong plugin requires a specific public or private key
+  to perform certain operations, it can use this entity.
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1739199693871
+preRequestScript: null
+afterResponseScript: null
+authentication: null
+headers: null

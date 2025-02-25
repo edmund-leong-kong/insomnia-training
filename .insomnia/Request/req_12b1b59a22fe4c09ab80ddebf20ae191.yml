@@ -1,0 +1,34 @@
+_id: req_12b1b59a22fe4c09ab80ddebf20ae191
+type: Request
+parentId: fld_10d8bb4759194d23abf4e17aed82ea3d
+modified: 1739199693961
+created: 1739199693961
+url: "{{ _.base_url }}/workspace_/groups/{{ _.groups }}/roles"
+name: Remove a role association from a group
+description: ""
+method: DELETE
+body: {}
+parameters:
+  - name: rbac_role_id
+    disabled: false
+    value: string
+  - name: workspace_id
+    disabled: false
+    value: string
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693961
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

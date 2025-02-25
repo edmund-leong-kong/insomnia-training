@@ -1,0 +1,28 @@
+_id: req_0895d3a6b05a4846aa029efe9d2e5938
+type: Request
+parentId: fld_ae956d6bfd334432813ea715b2e23232
+modified: 1739199693925
+created: 1739199693925
+url: "{{ _.base_url }}/{{ _.workspace }}/upstreams/{{ _.upstream_id_or_name }}"
+name: Delete an Upstream in a workspace
+description: Delete an Upstream in a workspace
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693925
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

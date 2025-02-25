@@ -1,0 +1,54 @@
+_id: req_4b14bc0cca234f3da7dfca42a1588514
+type: Request
+parentId: fld_a8e7fb40a7764ebfbb8d7a81bf374192
+modified: 1739199693879
+created: 1739199693879
+url: "{{ _.base_url }}/certificates/{{ _.certificate_id }}"
+name: Upsert a Certificate
+description: >
+  Update details about the specified certificate using the provided path
+  parameter `certificate_id`.
+
+
+  Inserts (or replaces) the certificate under the requested `certificate_id`with the definition specified in the request body. When the `name` or `id` attribute has the structure of a UUID, the certificate being inserted/replaced will be identified by its `id`. Otherwise it will be identified by the `name`.
+
+
+  When creating a new Certificate without specifying `id` (neither in the path or the request body), then it will be auto-generated.
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "cert": "-----BEGIN CERTIFICATE-----...",
+      "key": "-----BEGIN RSA PRIVATE KEY-----...",
+      "cert_alt": "string",
+      "key_alt": "\"-----BEGIN EC PRIVATE KEY-----...\"",
+      "snis": [
+        "string"
+      ],
+      "tags": [
+        "string"
+      ],
+      "passphrase": "example"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693879
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,40 @@
+_id: req_208ce9794f194409a2abd372113616f8
+type: Request
+parentId: fld_b280d58e241e4f1e84e9abcbe9518632
+modified: 1739199693884
+created: 1739199693884
+url: "{{ _.base_url }}/key-sets"
+name: List all Key Sets
+description: >
+  Retrieve a list of all Key Sets in the system. A Key Set object holds a
+  collection of asymmetric key objects. This entity allows to logically group
+  keys by their purpose. Key Sets can be both tagged and filtered by tags.
+method: GET
+body: {}
+parameters:
+  - name: size
+    disabled: true
+    value: "100"
+  - name: offset
+    disabled: true
+    value: string
+  - name: tags
+    disabled: true
+    value: string
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693884
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,44 @@
+_id: req_77e823677da64c56aceda045ce667681
+type: Request
+parentId: fld_a5ce5a96381142b8ba0917b84b76330a
+modified: 1739199693888
+created: 1739199693888
+url: "{{ _.base_url }}/routes"
+name: List all routes
+description: >-
+  List all routes
+
+
+  route entities define rules to match client requests. Each route is associated with a service, and a service may have multiple routes associated to it. Every request matching a given route will be proxied to its associated service.
+
+
+  Note: Path handling algorithms v1 was deprecated in Kong 3.0. From Kong 3.0, when router_flavor is set to expressions, route.path_handling will be unconfigurable and the path handling behavior will be "v0"; when router_flavor is set to traditional_compatible, the path handling behavior will be "v0" regardless of the value of route.path_handling. Only router_flavor = traditional will support path_handling "v1' behavior.
+method: GET
+body: {}
+parameters:
+  - name: size
+    disabled: true
+    value: "100"
+  - name: offset
+    disabled: true
+    value: string
+  - name: tags
+    disabled: true
+    value: string
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693888
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,36 @@
+_id: req_5960da31fc0449a88974c451f65c29e6
+type: Request
+parentId: fld_91301b69ec5b45be800a959f65fcc89f
+modified: 1739199693943
+created: 1739199693943
+url: "{{ _.base_url }}/keyring/remove"
+name: Remove key
+description: Remove a key from the keyring.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "key": "3Rwvk223"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693943
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

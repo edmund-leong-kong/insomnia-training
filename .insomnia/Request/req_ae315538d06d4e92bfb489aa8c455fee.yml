@@ -1,0 +1,53 @@
+_id: req_ae315538d06d4e92bfb489aa8c455fee
+type: Request
+parentId: fld_a7eb964a7c98499f876c5135465c9669
+modified: 1739199693957
+created: 1739199693957
+url: "{{ _.base_url }}/filter-chains/{{ _.filter_chain_id }}"
+name: Update Or Create Filter Chain
+description: >-
+  Inserts (or replaces) the filter chain under the requested resource with the
+  definition specified in the body. The filter chain is identified via the name
+  or ID attribute.
+
+
+  When the name or ID attribute has the structure of a UUID, the filter chain being inserted or replaced is identified by its ID. Otherwise, it is identified by its name.
+
+
+  When creating a new filter chain without specifying an ID (neither in the URL nor in the body), the ID will be auto-generated.
+
+
+  Notice that specifying a name in the URL and a different one in the request body is not allowed.
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      " name": "my-chain",
+      "enabled": "string",
+      "route": "string",
+      "service": "20487393-41ed-47f6-93a8-3407cade2002",
+      "filters": "string",
+      "tags": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693957
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,47 @@
+_id: req_7a332831a2d84c0a88b7e9fe2bb184b5
+type: Request
+parentId: fld_86647cee48074f6d862ca219e5600924
+modified: 1739199693959
+created: 1739199693959
+url: "{{ _.base_url }}/event-hooks"
+name: Add a webhook
+description: |
+  Add a webhook
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "event": "consumers",
+      "handler": "webhook",
+      "source": "crud",
+      "snooze": 0,
+      "on_change": true,
+      "config.url": "https://webhook.site/a1b2c3-d4e5-g6h7-i8j9-k1l2m3n4o5p6",
+      "config.headers": {
+        "headers": "string"
+      },
+      "config.secret": "string",
+      "config.ssl_verify": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693959
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

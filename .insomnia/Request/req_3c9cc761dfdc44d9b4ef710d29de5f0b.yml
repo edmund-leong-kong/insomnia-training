@@ -1,0 +1,42 @@
+_id: req_3c9cc761dfdc44d9b4ef710d29de5f0b
+type: Request
+parentId: fld_557e860c51744c6a99196dc1bce1337c
+modified: 1739199693924
+created: 1739199693924
+url: "{{ _.base_url }}/{{ _.workspace }}/snis/{{ _.sni_name_or_id }}"
+name: Upsert a SNI in a workspace
+description: Create or Update SNI using ID or name in a workspace.
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "my-sni",
+      "tags": [
+        "[\"user-level\", \"low-priority\"]"
+      ],
+      "certificate": {
+        "id": "91020192-062d-416f-a275-9addeeaffaf2"
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693924
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

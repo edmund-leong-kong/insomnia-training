@@ -1,0 +1,31 @@
+_id: req_acdeee09cbde43e99009a8cfb6b82233
+type: Request
+parentId: fld_e43d019135f14886b967edd600ddacab
+modified: 1739199693881
+created: 1739199693881
+url: "{{ _.base_url }}/consumers/{{ _.consumer_username_or_id }}"
+name: Fetch a consumer
+description: >
+  Retrieve the details of a specific consumer in the system using either the
+  consumer ID or the consumer username. If the consumer with the specified ID or
+  username cannot be found, the endpoint will return a 404.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693881
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

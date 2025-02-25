@@ -1,0 +1,30 @@
+_id: req_375f3225256b4d8ea42a8ee92ec77655
+type: Request
+parentId: fld_a7eb964a7c98499f876c5135465c9669
+modified: 1739199693957
+created: 1739199693957
+url: "{{ _.base_url }}/routes/{{ _.route_id_or_name }}/filter-chains/{{
+  _.filter_chain_id }}"
+name: List Filter Chains Associated to a Specific Route
+description: |
+  Retrieve filter chain associated to a specific route.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693957
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

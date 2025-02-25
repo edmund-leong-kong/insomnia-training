@@ -1,0 +1,30 @@
+_id: req_70eddf02a36d468192fc6ff450d2ba54
+type: Request
+parentId: fld_6a937d1db9344ae483e2150c4d84e5cc
+modified: 1739199693940
+created: 1739199693940
+url: "{{ _.base_url }}/{{ _.endpoint }}"
+name: Check endpoint or entity existence
+description: >
+  Similar to `HTTP` GET, but does not return the body. Returns HTTP 200 when the
+  endpoint exits or HTTP 404 when it does not. Other status codes are possible.
+method: HEAD
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693940
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,53 @@
+_id: req_246fa480eff646e2bc96f78f082d4d60
+type: Request
+parentId: fld_a8e7fb40a7764ebfbb8d7a81bf374192
+modified: 1739199693878
+created: 1739199693878
+url: "{{ _.base_url }}/certificates/{{ _.certificate_id }}"
+name: Update a Certificate
+description: >
+  Update a Certificate
+
+
+  Inserts (or replaces) the certificate under the requested `certificate_id`with the definition specified in the request body. When the `name` or `id` attribute has the structure of a UUID, the certificate being inserted/replaced will be identified by its `id`. Otherwise it will be identified by the `name`.
+
+
+  When creating a new Certificate without specifying `id` (neither in the path or the request body), then it will be auto-generated.
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "cert": "-----BEGIN CERTIFICATE-----...",
+      "key": "-----BEGIN RSA PRIVATE KEY-----...",
+      "cert_alt": "string",
+      "key_alt": "\"-----BEGIN EC PRIVATE KEY-----...\"",
+      "snis": [
+        "string"
+      ],
+      "tags": [
+        "string"
+      ],
+      "passphrase": "example"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693878
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

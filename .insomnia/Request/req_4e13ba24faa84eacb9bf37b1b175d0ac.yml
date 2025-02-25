@@ -1,0 +1,46 @@
+_id: req_4e13ba24faa84eacb9bf37b1b175d0ac
+type: Request
+parentId: fld_06a43b6bbab94c41aeefd2c56161e734
+modified: 1739199693936
+created: 1739199693936
+url: "{{ _.base_url }}/{{ _.workspace }}/consumer_groups/{{ _.group_name_or_id
+  }}/consumers"
+name: Add a consumer to a group
+description: >-
+  Add a consumer to a specific consumer group.
+
+
+  If you add a consumer to multiple groups:
+
+
+  If all groups are allowed by the Rate Limiting Advanced plugin, only the first group's settings will apply.
+
+  Otherwise, whichever group is specified in the Rate Limiting Advanced plugin will be active.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "consumer": "8a4bba3c-7f82-45f0-8121-ed4d2847c4a4"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693936
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

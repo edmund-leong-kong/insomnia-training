@@ -1,0 +1,30 @@
+_id: req_3d2e286f79dc4c22ad10d4f5c05c3e4b
+type: Request
+parentId: fld_b280d58e241e4f1e84e9abcbe9518632
+modified: 1739199693884
+created: 1739199693884
+url: "{{ _.base_url }}/key-sets/{{ _.key-set_id_or_name }}"
+name: Fetch a Key Set
+description: >
+  Get a Key Set using ID or name. This endpoint retrieves information about a
+  specific key-set based on its ID or name.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693884
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

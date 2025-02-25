@@ -1,0 +1,28 @@
+_id: req_b93b371685cd4013b93b2ffb92ba7318
+type: Request
+parentId: fld_0a2cb143ba8448a6b61d34651925da2c
+modified: 1739199693948
+created: 1739199693948
+url: "{{ _.base_url }}/groups/{{ _.name_or_id }}"
+name: Retrieve a Group
+description: Retrieve a group using their name or ID.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693948
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

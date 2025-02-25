@@ -1,0 +1,28 @@
+_id: req_b0c2d11efff249cc97e55b2d63c01d4d
+type: Request
+parentId: fld_a8e7fb40a7764ebfbb8d7a81bf374192
+modified: 1739199693878
+created: 1739199693878
+url: "{{ _.base_url }}/certificates/{{ _.certificate_id }}"
+name: Fetch a Certificate
+description: Get a Certificate using ID.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693878
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

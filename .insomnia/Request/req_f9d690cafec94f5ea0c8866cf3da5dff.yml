@@ -1,0 +1,37 @@
+_id: req_f9d690cafec94f5ea0c8866cf3da5dff
+type: Request
+parentId: fld_557e860c51744c6a99196dc1bce1337c
+modified: 1739199693923
+created: 1739199693923
+url: "{{ _.base_url }}/{{ _.workspace }}/snis"
+name: List all SNIs in a workspace
+description: List all SNIs in a workspace
+method: GET
+body: {}
+parameters:
+  - name: size
+    disabled: true
+    value: "100"
+  - name: offset
+    disabled: true
+    value: string
+  - name: tags
+    disabled: true
+    value: string
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693923
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

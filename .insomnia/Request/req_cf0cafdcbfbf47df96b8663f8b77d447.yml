@@ -1,0 +1,30 @@
+_id: req_cf0cafdcbfbf47df96b8663f8b77d447
+type: Request
+parentId: fld_06a43b6bbab94c41aeefd2c56161e734
+modified: 1739199693936
+created: 1739199693936
+url: "{{ _.base_url }}/{{ _.workspace }}/consumers/{{ _.consumer_name_or_id
+  }}/consumer_groups/{{ _.group_name_or_id }}"
+name: Remove a consumer from a consumer group
+description: Removes a consumer from a consumer group. This operation does not
+  delete the consumer group.
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693936
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

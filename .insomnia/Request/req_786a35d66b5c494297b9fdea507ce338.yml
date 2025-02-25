@@ -1,0 +1,29 @@
+_id: req_786a35d66b5c494297b9fdea507ce338
+type: Request
+parentId: fld_557e860c51744c6a99196dc1bce1337c
+modified: 1739199693880
+created: 1739199693880
+url: "{{ _.base_url }}/certificates/{{ _.certificate_id }}/snis/{{
+  _.sni_name_or_id }}"
+name: Fetch an SNI associated with a Certificate
+description: Get an SNI associated with a Certificate using ID or name.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693880
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

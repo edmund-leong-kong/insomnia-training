@@ -1,0 +1,43 @@
+_id: req_4a0b7f05dba14ae9b8ceb8ee675a511d
+type: Request
+parentId: fld_9ee4ae8eb4b0473e82cf6f4fe0c06595
+modified: 1739199693926
+created: 1739199693926
+url: "{{ _.base_url }}/{{ _.workspace }}/upstreams/{{ _.upstream_id_or_name
+  }}/targets"
+name: Create a new Target associated with an Upstream in a workspace
+description: Create a new Target associated with an Upstream in a workspace
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "upstream": {
+        "id": "173a6cee-90d1-40a7-89cf-0329eca780a6"
+      },
+      "weight": 100,
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693926
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

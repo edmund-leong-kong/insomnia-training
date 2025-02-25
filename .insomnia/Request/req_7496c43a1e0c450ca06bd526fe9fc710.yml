@@ -1,0 +1,28 @@
+_id: req_7496c43a1e0c450ca06bd526fe9fc710
+type: Request
+parentId: fld_10d8bb4759194d23abf4e17aed82ea3d
+modified: 1739199693962
+created: 1739199693962
+url: "{{ _.base_url }}/workspace_/groups/{{ _.groups }}/roles"
+name: Retrieve roles associated with a specific group
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693962
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

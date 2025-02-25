@@ -1,0 +1,29 @@
+_id: req_9348b8645a7e451b96f479424e116ce0
+type: Request
+parentId: fld_a7eb964a7c98499f876c5135465c9669
+modified: 1739199693957
+created: 1739199693957
+url: "{{ _.base_url }}/filter-chains/{{ _.filter_chain_id }}"
+name: Delete Filter Chain
+description: |
+  Delete filter chain.
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693957
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

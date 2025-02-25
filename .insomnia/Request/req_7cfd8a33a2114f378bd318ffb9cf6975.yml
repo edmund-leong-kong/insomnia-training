@@ -1,0 +1,29 @@
+_id: req_7cfd8a33a2114f378bd318ffb9cf6975
+type: Request
+parentId: fld_86647cee48074f6d862ca219e5600924
+modified: 1739199693960
+created: 1739199693960
+url: "{{ _.base_url }}/event-hooks/{{ _.event-hook-id }}/ping"
+name: Ping a webhook event hook
+description: |
+  Ping a webhook event hook.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693960
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

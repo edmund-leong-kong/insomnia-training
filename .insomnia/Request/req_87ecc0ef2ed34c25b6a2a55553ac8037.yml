@@ -1,0 +1,28 @@
+_id: req_87ecc0ef2ed34c25b6a2a55553ac8037
+type: Request
+parentId: fld_8ab0a0f289094a8f9a098721d04bc976
+modified: 1739199693886
+created: 1739199693886
+url: "{{ _.base_url }}/keys/{{ _.key_id_or_name }}"
+name: Delete a Key
+description: Delete a Key
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693886
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

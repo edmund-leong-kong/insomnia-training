@@ -1,0 +1,39 @@
+_id: req_9447abb8c7044ca29d5a0fff6b5c21f3
+type: Request
+parentId: fld_99ed48b72cff443692ac6702d7ea380f
+modified: 1739199693950
+created: 1739199693950
+url: "{{ _.base_url }}/rbac/users/{{ _.name_or_id }}"
+name: Update a User
+description: Update a user. Users are unable to update their own roles.
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "string",
+      "user_token": "string",
+      "enabled": "string",
+      "comment": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693950
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

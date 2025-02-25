@@ -1,0 +1,28 @@
+_id: req_ec88960a6b6747e292091ccd2786f973
+type: Request
+parentId: fld_99ed48b72cff443692ac6702d7ea380f
+modified: 1739199693950
+created: 1739199693950
+url: "{{ _.base_url }}/rbac/users/{{ _.name_or_id }}"
+name: Retrieve a User
+description: Retrieve a user by passing a name or ID in the path.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693950
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

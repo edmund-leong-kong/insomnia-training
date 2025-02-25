@@ -1,0 +1,34 @@
+_id: req_5783f3d33e854687acf75e0bfbb346de
+type: Request
+parentId: fld_86647cee48074f6d862ca219e5600924
+modified: 1739199693959
+created: 1739199693959
+url: "{{ _.base_url }}/event-hooks/{{ _.event-hook-id }}/test"
+name: Test an event hook
+description: >-
+  It’s useful to manually trigger an event hook without provoking the event to
+  be triggered. For instance, you might want to test the integration, or see if
+  your hook’s service is receiving a payload from Kong.
+
+
+  POST any data to `/event-hooks/:id-of-hook/test`, and the `/test` endpoint executes the with the provided data as the event payload.
+method: POST
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693959
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

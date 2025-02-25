@@ -1,0 +1,32 @@
+_id: req_9e5e641629274d528083c9df47885116
+type: Request
+parentId: fld_91301b69ec5b45be800a959f65fcc89f
+modified: 1739199693940
+created: 1739199693940
+url: "{{ _.base_url }}/keyring"
+name: Fetch cluster Keyring
+description: Kong Gateway provides a mechanism to store sensitive data fields,
+  such as consumer secrets, in an encrypted format within the database.This
+  provides for encryption-at-rest security controls in a Kong cluster. For more
+  information review the [keyring and data encryption
+  documentation](https://docs.konghq.com/gateway/latest/kong-enterprise/db-encryption/#getting-started).
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693940
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

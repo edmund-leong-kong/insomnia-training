@@ -1,0 +1,17 @@
+_id: fld_a7eb964a7c98499f876c5135465c9669
+type: RequestGroup
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693874
+created: 1739199693874
+name: filter-chains
+description: >
+  A filter chain is the database entity representing one or more WebAssembly
+  filters executed for each request to a particular service or route, each one
+  with its configuration.
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1739199693874
+preRequestScript: null
+afterResponseScript: null
+authentication: null
+headers: null

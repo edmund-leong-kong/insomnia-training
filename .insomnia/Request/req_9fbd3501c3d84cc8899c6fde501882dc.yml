@@ -1,0 +1,41 @@
+_id: req_9fbd3501c3d84cc8899c6fde501882dc
+type: Request
+parentId: fld_91301b69ec5b45be800a959f65fcc89f
+modified: 1739199693943
+created: 1739199693943
+url: "{{ _.base_url }}/keyring/vault/sync"
+name: Synchronize Vault keyring
+description: >
+  Kong reads the keyring material from Vault when the Kong process starts.
+
+  Any changes to the Vault KV store are not reflected on the Kong node until Kong syncs with Vault via the `/keyring/vault/sync` Admin API endpoint. 
+
+  This allows Kong to receive a Vault token with a low TTL, as the list and read operation only occur once.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "token": "example-token"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693943
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

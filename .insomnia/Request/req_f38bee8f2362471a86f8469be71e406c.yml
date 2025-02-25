@@ -1,0 +1,39 @@
+_id: req_f38bee8f2362471a86f8469be71e406c
+type: Request
+parentId: fld_e43d019135f14886b967edd600ddacab
+modified: 1739199693880
+created: 1739199693880
+url: "{{ _.base_url }}/consumers"
+name: List all Consumers
+description: Retrieve a list of all consumers.You can use query parameters to
+  filter the results by size or tags, for example
+  `/consumers?size=50&tags=enterprise`.
+method: GET
+body: {}
+parameters:
+  - name: size
+    disabled: true
+    value: "100"
+  - name: offset
+    disabled: true
+    value: string
+  - name: tags
+    disabled: true
+    value: string
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693880
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,39 @@
+_id: req_9724e615b7cd4bd0942fe57a03af6ab4
+type: Request
+parentId: fld_99ed48b72cff443692ac6702d7ea380f
+modified: 1739199693953
+created: 1739199693953
+url: "{{ _.base_url }}/rbac/roles/{{ _.name_or_id }}/endpoints/{{
+  _.workspace_name_or_id }}/{{ _.endpoint }}"
+name: Update a Role Endpoint Permission
+description: |
+  Update a Role Endpoint Permission
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "negative": "string",
+      "actions": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693953
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

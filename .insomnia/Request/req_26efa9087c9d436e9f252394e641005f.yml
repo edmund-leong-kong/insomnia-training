@@ -1,0 +1,31 @@
+_id: req_26efa9087c9d436e9f252394e641005f
+type: Request
+parentId: fld_fccafe65788a4cd7862c5ec834bcc589
+modified: 1739199693903
+created: 1739199693903
+url: "{{ _.base_url }}/vaults/{{ _.vault_id_or_prefix }}"
+name: Fetch a Vault
+description: |
+  Fetch a Vault using ID or prefix.
+
+  Vault entities are used to configure different Vault connectors.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693903
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

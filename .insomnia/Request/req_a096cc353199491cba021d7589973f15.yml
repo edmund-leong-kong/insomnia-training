@@ -1,0 +1,39 @@
+_id: req_a096cc353199491cba021d7589973f15
+type: Request
+parentId: fld_b280d58e241e4f1e84e9abcbe9518632
+modified: 1739199693912
+created: 1739199693912
+url: "{{ _.base_url }}/{{ _.workspace }}/key-sets"
+name: Create a new Key Set in a workspace
+description: Create a new Key Set in a workspace
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "my-key_set",
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693912
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

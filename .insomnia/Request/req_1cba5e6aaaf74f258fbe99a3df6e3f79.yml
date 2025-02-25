@@ -1,0 +1,35 @@
+_id: req_1cba5e6aaaf74f258fbe99a3df6e3f79
+type: Request
+parentId: fld_91301b69ec5b45be800a959f65fcc89f
+modified: 1739199693943
+created: 1739199693943
+url: "{{ _.base_url }}/keyring/export"
+name: Export keyring
+description: >
+  Export the keyring. The exported material can be re-imported to the cluster in
+  the event of an outage or to restore a previously-deleted key.
+
+  The exported keyring should be stored in a safe location for disaster recovery purposes. It is not designed to be modified or decrypted before being used during a disaster recovery process.
+
+  '401': 
+    $ref: '#/components/responses/HTTP401Error'
+method: POST
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693943
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,39 @@
+_id: req_0afcfdb4d22f43a48fb65e43dfa25e5f
+type: Request
+parentId: fld_91301b69ec5b45be800a959f65fcc89f
+modified: 1739199693944
+created: 1739199693944
+url: "{{ _.base_url }}/keyring/import"
+name: Import Keyring
+description: Restart Kong and re-import the previously exported keyring. This
+  operation requires that the keyring_private_key point to the private RSA key
+  associated with the public key used during the initial keyring export.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "key": "t6NWgbj3g9cbNVC3/D6oZ2Md1Br5gWtRrqb1T2FZy44=",
+      "id": "8zgITLQh"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693944
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,44 @@
+_id: req_f72f61f045244019864045b7eea60b6e
+type: Request
+parentId: fld_fccafe65788a4cd7862c5ec834bcc589
+modified: 1739199693928
+created: 1739199693928
+url: "{{ _.base_url }}/{{ _.workspace }}/vaults/{{ _.vault_id_or_prefix }}"
+name: Update a Vault in a workspace
+description: Update a Vault in a workspace
+method: PATCH
+body:
+  mimeType: application/json
+  text: >-
+    {
+      "prefix": "env",
+      "name": "env",
+      "description": "This vault is used to retrieve Redis database access credentials.",
+      "config": {
+        "prefix": "SSL_"
+      },
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693928
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

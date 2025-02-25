@@ -1,0 +1,28 @@
+_id: req_08e985ae917e4780bfe91e9e3ac65de2
+type: Request
+parentId: fld_557e860c51744c6a99196dc1bce1337c
+modified: 1739199693898
+created: 1739199693898
+url: "{{ _.base_url }}/snis/{{ _.sni_name_or_id }}"
+name: Fetch an SNI
+description: Get an SNI using ID or name.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693898
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

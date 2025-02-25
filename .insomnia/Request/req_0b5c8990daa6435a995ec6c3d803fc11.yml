@@ -1,0 +1,51 @@
+_id: req_0b5c8990daa6435a995ec6c3d803fc11
+type: Request
+parentId: fld_8ab0a0f289094a8f9a098721d04bc976
+modified: 1739199693885
+created: 1739199693885
+url: "{{ _.base_url }}/keys"
+name: Create a new Key
+description: This API endpoint allows you to create a new key. When the request
+  is successful, the API will respond with a 200 status code and a JSON object
+  that represents the newly created key. If the request is invalid, the API will
+  respond with a 400 status code and an error message in the response body.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "set": {
+        "id": "string"
+      },
+      "name": "my-key",
+      "kid": "42",
+      "jwk": "{\\\"alg\\\":\\\"RSA\\\",  \\\"kid\\\": \\\"42\\\",  ...}",
+      "pem": {
+        "private_key": "private_key\": \"-----BEGIN",
+        "public_key": "public_key\": \"-----BEGIN"
+      },
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693885
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

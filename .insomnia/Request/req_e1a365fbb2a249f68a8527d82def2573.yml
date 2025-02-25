@@ -1,0 +1,28 @@
+_id: req_e1a365fbb2a249f68a8527d82def2573
+type: Request
+parentId: fld_8b030fa7a20a4d2a931a9ac88e6dc357
+modified: 1739199693892
+created: 1739199693892
+url: "{{ _.base_url }}/services/{{ _.service_id_or_name }}"
+name: Delete a Service
+description: Delete a Service
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693892
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

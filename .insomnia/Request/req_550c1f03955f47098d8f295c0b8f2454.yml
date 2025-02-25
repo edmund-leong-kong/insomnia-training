@@ -1,0 +1,29 @@
+_id: req_550c1f03955f47098d8f295c0b8f2454
+type: Request
+parentId: fld_9ee4ae8eb4b0473e82cf6f4fe0c06595
+modified: 1739199693901
+created: 1739199693901
+url: "{{ _.base_url }}/upstreams/{{ _.upstream_id_or_name }}/targets/{{
+  _.target_id_or_target }}"
+name: Fetch a Target associated with an Upstream
+description: Get a Target associated with an Upstream using ID or target.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693901
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

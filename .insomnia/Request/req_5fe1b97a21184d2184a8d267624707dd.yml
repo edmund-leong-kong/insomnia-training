@@ -1,0 +1,28 @@
+_id: req_5fe1b97a21184d2184a8d267624707dd
+type: Request
+parentId: fld_ae956d6bfd334432813ea715b2e23232
+modified: 1739199693899
+created: 1739199693899
+url: "{{ _.base_url }}/upstreams/{{ _.upstream_id_or_name }}"
+name: Delete an Upstream
+description: Delete an Upstream
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693899
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,28 @@
+_id: req_1988eece40484221a9eadcfbbc354e8f
+type: Request
+parentId: fld_99ed48b72cff443692ac6702d7ea380f
+modified: 1739199693951
+created: 1739199693951
+url: "{{ _.base_url }}/rbac/roles/{{ _.name_or_id }}"
+name: Retrieve a Role
+description: Retrieve a role by passing the name or UUID as a path parameter.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693951
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

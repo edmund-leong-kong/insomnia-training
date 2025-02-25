@@ -1,0 +1,52 @@
+_id: req_1c97c60658064e12b69d60f392bb0eff
+type: Request
+parentId: fld_e43d019135f14886b967edd600ddacab
+modified: 1739199693882
+created: 1739199693882
+url: "{{ _.base_url }}/consumers/{{ _.consumer_username_or_id }}"
+name: Upsert a Consumer
+description: >-
+  Create or Update Consumer using ID or username. The consumer will be
+  identified via the username or id attribute.If the consumer with the specified
+  ID or username cannot be found, the endpoint will return a 404.
+
+
+  When the username or id attribute has the structure of a UUID, the Consumer being inserted/replaced will be identified by its id. Otherwise it will be identified by its username.
+
+
+  When creating a new Consumer without specifying id (neither in the URL nor in the body), then it will be auto-generated.
+
+
+  Notice that specifying a username in the URL and a different one in the request body is not allowed.
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "username": "string",
+      "custom_id": "string",
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693882
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,29 @@
+_id: req_e2882c1abff04a5d9a8d841da90575f2
+type: Request
+parentId: fld_99ed48b72cff443692ac6702d7ea380f
+modified: 1739199693951
+created: 1739199693951
+url: "{{ _.base_url }}/rbac/users/{{ _.name_or_id }}"
+name: Delete a User
+description: |
+  Delete a user.
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693951
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,39 @@
+_id: req_1c4717dcae614e58b167227531b2bee2
+type: Request
+parentId: fld_6cd2d255569349e1becef3a1201ef7a7
+modified: 1739199693946
+created: 1739199693946
+url: "{{ _.base_url }}/admins/{{ _.name_or_id }}"
+name: Update an Admin
+description: Update information about an admin
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name_or_id": "string",
+      "username": "string",
+      "email": "string",
+      "rbac_token_enabled": true
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693946
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

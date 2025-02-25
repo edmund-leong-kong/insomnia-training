@@ -1,0 +1,42 @@
+_id: req_6e746eff250047c48cb78e386bd7714d
+type: Request
+parentId: fld_a7eb964a7c98499f876c5135465c9669
+modified: 1739199693956
+created: 1739199693956
+url: "{{ _.base_url }}/services/{{ _.service_id_or_name }}/filter-chains"
+name: Create Filter Chain Associated to a Specific Service
+description: |
+  Add filter chain Associated to a Specific Service
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      " name": "my-chain",
+      "enabled": "string",
+      "route": "string",
+      "service": "20487393-41ed-47f6-93a8-3407cade2002",
+      "filters": "string",
+      "tags": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693956
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

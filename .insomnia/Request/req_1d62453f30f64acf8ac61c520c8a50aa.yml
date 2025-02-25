@@ -1,0 +1,32 @@
+_id: req_1d62453f30f64acf8ac61c520c8a50aa
+type: Request
+parentId: fld_68aa1935818245ddbed46960e5fe031e
+modified: 1739199693950
+created: 1739199693950
+url: "{{ _.base_url }}/debug/node/log-level"
+name: Retrieve Node Log Level of A Node
+description: >
+  Retrieve the current log level of a node.
+
+
+  See the [Nginx Documentation](https://nginx.org/en/docs/ngx_core_module.html#error_log) for the list of possible return values.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693950
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

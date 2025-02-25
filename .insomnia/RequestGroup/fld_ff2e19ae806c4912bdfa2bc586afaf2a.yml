@@ -1,0 +1,15 @@
+_id: fld_ff2e19ae806c4912bdfa2bc586afaf2a
+type: RequestGroup
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693874
+created: 1739199693874
+name: cache
+description: |
+  Querying and managing cache entries.
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1739199693874
+preRequestScript: null
+afterResponseScript: null
+authentication: null
+headers: null

@@ -1,0 +1,37 @@
+_id: req_d247c10907f2456c9510a017450192ed
+type: Request
+parentId: fld_a5ce5a96381142b8ba0917b84b76330a
+modified: 1739199693916
+created: 1739199693916
+url: "{{ _.base_url }}/{{ _.workspace }}/routes"
+name: List all routes in a workspace
+description: List all routes in a workspace
+method: GET
+body: {}
+parameters:
+  - name: size
+    disabled: true
+    value: "100"
+  - name: offset
+    disabled: true
+    value: string
+  - name: tags
+    disabled: true
+    value: string
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693916
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

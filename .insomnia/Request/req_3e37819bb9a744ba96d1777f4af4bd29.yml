@@ -1,0 +1,46 @@
+_id: req_3e37819bb9a744ba96d1777f4af4bd29
+type: Request
+parentId: fld_68aa1935818245ddbed46960e5fe031e
+modified: 1739374767023
+created: 1739199693949
+url: "{{ _.base_url }}/debug/cluster/log-level/info"
+name: Set Node Log Level of All Nodes
+description: >-
+  Change the log level of all nodes in a cluster.
+
+
+  Be careful when changing the log level of a node to debug in a production environment because the disk could fill up quickly. As soon as the debug logging finishes, revert back to a higher level, such as notice.
+
+  It’s currently not possible to change the log level of data plane and DB-less nodes.
+
+
+  This endpoint can be protected with RBAC, and changes will be reflected in the audit logs. 
+
+  The log level change is propagated to all Nginx workers of a node, including to newly spawned workers.
+
+
+  Log levels are set in Kong’s configuration. Possible log levels in increasing order of severity: `debug`, `info`, `notice`, `warn`, `error`, and `crit`. For more information, review the [logging reference](https://docs.konghq.com/gateway/latest/production/logging/).
+
+
+  Currently, when a user dynamically changes the log level for the entire cluster, if a new node joins the cluster, the new node will run at the previous log level, not at the log level that was previously set dynamically for the entire cluster. To work around that, make sure the new node starts with the proper level by setting the startup `kong.conf` setting [`KONG_LOG_LEVEL`](https://docs.konghq.com/gateway/latest/reference/configuration/#log_level).
+method: PUT
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: basic
+  useISO88591: false
+  disabled: false
+  username: kong
+  password: kong
+preRequestScript: null
+metaSortKey: -1739199693949
+isPrivate: false
+pathParameters: []
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

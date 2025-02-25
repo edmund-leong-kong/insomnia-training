@@ -1,0 +1,20 @@
+_id: fld_ee8b35e4ae8c49a6b9cd66aa8de881ba
+type: RequestGroup
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693872
+created: 1739199693872
+name: licenses
+description: >
+  A license entity lets you configure a license in your Kong Gateway cluster, in
+  both traditional and hybrid mode deployments. 
+
+  In hybrid mode deployments, the control plane sends licenses configured through the `/licenses` endpoint to all data planes in the cluster.
+
+  The data planes use the most recent `updated_at` license.
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1739199693872
+preRequestScript: null
+afterResponseScript: null
+authentication: null
+headers: null

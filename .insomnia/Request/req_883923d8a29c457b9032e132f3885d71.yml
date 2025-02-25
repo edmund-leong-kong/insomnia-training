@@ -1,0 +1,29 @@
+_id: req_883923d8a29c457b9032e132f3885d71
+type: Request
+parentId: fld_68aa1935818245ddbed46960e5fe031e
+modified: 1739199693950
+created: 1739199693950
+url: "{{ _.base_url }}/debug/node/log-level/{{ _.log_level }}"
+name: Set Log Level of A Single Node
+description: |
+  Change the log level of a node.
+method: PUT
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693950
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

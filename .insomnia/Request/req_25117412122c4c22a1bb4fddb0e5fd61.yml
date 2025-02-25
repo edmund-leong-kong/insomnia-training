@@ -1,0 +1,84 @@
+_id: req_25117412122c4c22a1bb4fddb0e5fd61
+type: Request
+parentId: fld_a5ce5a96381142b8ba0917b84b76330a
+modified: 1739199693917
+created: 1739199693917
+url: "{{ _.base_url }}/{{ _.workspace }}/routes/{{ _.route_id_or_name }}"
+name: Upsert a route in a workspace
+description: Create or Update route using ID or name in a workspace.
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "string",
+      "protocols": [
+        "tcp"
+      ],
+      "methods": [
+        "GET"
+      ],
+      "hosts": [
+        "string"
+      ],
+      "paths": [
+        "string"
+      ],
+      "headers": {
+        "x-my-header": [
+          "string"
+        ],
+        "x-another-header": [
+          "string"
+        ]
+      },
+      "https_redirect_status_code": 426,
+      "regex_priority": 0,
+      "strip_path": true,
+      "path_handling": "v0",
+      "preserve_host": true,
+      "request_buffering": true,
+      "response_buffering": true,
+      "snis": [
+        "string"
+      ],
+      "sources": [
+        {
+          "ip": "10.1.0.0/16",
+          "port": 1234
+        }
+      ],
+      "destinations": [
+        {
+          "ip": "0.1.0.0/16",
+          "port": 0
+        }
+      ],
+      "tags": [
+        "string"
+      ],
+      "service": {
+        "id": "af8330d3-dbdc-48bd-b1be-55b98608834b"
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693917
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

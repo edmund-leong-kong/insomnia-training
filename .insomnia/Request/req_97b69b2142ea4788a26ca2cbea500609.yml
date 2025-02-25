@@ -1,0 +1,29 @@
+_id: req_97b69b2142ea4788a26ca2cbea500609
+type: Request
+parentId: fld_7d2b7272ce894c4ca1d7bd38930e93c1
+modified: 1739199693932
+created: 1739199693932
+url: "{{ _.base_url }}/consumer_groups/{{ _.consumer_group_name_or_id
+  }}/plugins/{{ _.plugin_id }}"
+name: Fetch a plugin associated with a Consumer Group
+description: Get a plugin associated with a Consumer Group using ID.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693932
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

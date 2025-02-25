@@ -1,0 +1,29 @@
+_id: req_3af4e36291274b51b8888878ae03673f
+type: Request
+parentId: fld_9ee4ae8eb4b0473e82cf6f4fe0c06595
+modified: 1739199693927
+created: 1739199693927
+url: "{{ _.base_url }}/{{ _.workspace }}/upstreams/{{ _.upstream_id_or_name
+  }}/targets/{{ _.target_id_or_target }}"
+name: Fetch a Target associated with an Upstream in a workspace
+description: Get a Target associated with an Upstream using ID or target in a workspace.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693927
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

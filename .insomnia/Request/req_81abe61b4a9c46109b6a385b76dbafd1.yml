@@ -1,0 +1,41 @@
+_id: req_81abe61b4a9c46109b6a385b76dbafd1
+type: Request
+parentId: fld_a8e7fb40a7764ebfbb8d7a81bf374192
+modified: 1739199693878
+created: 1739199693878
+url: "{{ _.base_url }}/certificates"
+name: Create a new Certificate
+description: Create a new certificate with the provided details. Use this
+  endpoint to add a new certificate to the system. The request body must include
+  the certificate data and other details required for creating a new
+  certificate.
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+      "cert": "-----BEGIN CERTIFICATE-----\ncertificate-content\n-----END CERTIFICATE-----",
+      "id": "b2f34145-0343-41a4-9602-4c69dec2f269",
+      "key": "-----BEGIN PRIVATE KEY-----\nprivate-key-content\n-----END PRIVATE KEY-----"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693878
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

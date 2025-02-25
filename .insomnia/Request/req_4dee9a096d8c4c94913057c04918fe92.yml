@@ -1,0 +1,115 @@
+_id: req_4dee9a096d8c4c94913057c04918fe92
+type: Request
+parentId: fld_ae956d6bfd334432813ea715b2e23232
+modified: 1739199693926
+created: 1739199693926
+url: "{{ _.base_url }}/{{ _.workspace }}/upstreams/{{ _.upstream_id_or_name }}"
+name: Upsert a Upstream in a workspace
+description: Create or Update Upstream using ID or name in a workspace.
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "my-upstream",
+      "algorithm": "round-robin",
+      "hash_on": "none",
+      "hash_fallback": "none",
+      "hash_on_header": "none",
+      "hash_fallback_header": "none",
+      "hash_on_cookie": "none",
+      "hash_on_cookie_path": "/",
+      "hash_on_query_arg": "hash_value",
+      "hash_fallback_query_arg": "hash_value",
+      "hash_on_uri_capture": "hash_value",
+      "hash_fallback_uri_capture": "hash_value",
+      "slots": 5000,
+      "healthchecks": {
+        "passive": {
+          "type": "tcp",
+          "healthy": {
+            "http_statuses": [
+              200,
+              201,
+              202
+            ],
+            "successes": 2
+          },
+          "unhealthy": {
+            "http_statuses": [
+              500,
+              503
+            ],
+            "timeouts": 1,
+            "http_failures": 3,
+            "tcp_failures": 1
+          }
+        },
+        "active": {
+          "https_verify_certificate": true,
+          "healthy": {
+            "http_statuses": [
+              200,
+              201
+            ],
+            "successes": 3,
+            "interval": 30
+          },
+          "unhealthy": {
+            "http_failures": 2,
+            "http_statuses": [
+              400,
+              404
+            ],
+            "timeouts": 2,
+            "tcp_failures": 1,
+            "interval": 10
+          },
+          "type": "https",
+          "concurrency": 5,
+          "headers": {
+            "x-my-header": [
+              "foo",
+              "bar"
+            ],
+            "x-another-header": [
+              "bla"
+            ]
+          },
+          "timeout": 5,
+          "http_path": "/",
+          "https_sni": "string"
+        },
+        "threshold": 0
+      },
+      "tags": [
+        "user-level",
+        "low-priority"
+      ],
+      "host_header": "string",
+      "client_certificate": {
+        "id": "ea29aaa3-3b2d-488c-b90c-56df8e0dd8c6"
+      },
+      "use_srv_name": true
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693926
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

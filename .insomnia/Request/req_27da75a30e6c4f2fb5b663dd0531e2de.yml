@@ -1,0 +1,29 @@
+_id: req_27da75a30e6c4f2fb5b663dd0531e2de
+type: Request
+parentId: fld_7d2b7272ce894c4ca1d7bd38930e93c1
+modified: 1739199693918
+created: 1739199693918
+url: "{{ _.base_url }}/{{ _.workspace }}/routes/{{ _.route_id_or_name
+  }}/plugins/{{ _.plugin_id }}"
+name: Fetch a plugin associated with a route in a workspace
+description: Get a plugin associated with a route using ID in a workspace.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693918
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

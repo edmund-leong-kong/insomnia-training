@@ -1,0 +1,31 @@
+_id: req_87a41d1769184c8daf12abbd6ad7267d
+type: Request
+parentId: fld_6cd2d255569349e1becef3a1201ef7a7
+modified: 1739199693945
+created: 1739199693945
+url: "{{ _.base_url }}/admins"
+name: List Admins
+description: Returns a list of admins. To query all admins, add a parameter
+  `all_workspaces=true` to the `/admins` endpoint. The `status` field in the
+  response indicates the state of the admins invitation. `0`= Approved, `1`=
+  Pending, `2`= Rejected, `3`= Revoked, `4` = Invited, `5`= Unverified.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693945
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

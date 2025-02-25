@@ -1,0 +1,43 @@
+_id: req_13d9b24d14984da99467b0907cc340a7
+type: Request
+parentId: fld_a7eb964a7c98499f876c5135465c9669
+modified: 1739199693955
+created: 1739199693955
+url: "{{ _.base_url }}/filter-chains"
+name: Add Filter Chain
+description: |
+  Create Filter Chain
+  Note: This API is not available in DB-less mode.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      " name": "my-chain",
+      "enabled": "string",
+      "route": "string",
+      "service": "20487393-41ed-47f6-93a8-3407cade2002",
+      "filters": "string",
+      "tags": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693955
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

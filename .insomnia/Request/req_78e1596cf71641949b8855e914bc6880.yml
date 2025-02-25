@@ -1,0 +1,56 @@
+_id: req_78e1596cf71641949b8855e914bc6880
+type: Request
+parentId: fld_7d2b7272ce894c4ca1d7bd38930e93c1
+modified: 1739199693915
+created: 1739199693915
+url: "{{ _.base_url }}/{{ _.workspace }}/plugins/{{ _.plugin_id }}"
+name: Update a plugin in a workspace
+description: Update a plugin in a workspace
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "rate-limiting",
+      "route": "string",
+      "service": "string",
+      "consumer": "string",
+      "instance_name": "rate-limiting-foo",
+      "config": {
+        "hour": 500,
+        "minute": 500
+      },
+      "protocols": [
+        "http"
+      ],
+      "enabled": true,
+      "tags": [
+        "string"
+      ],
+      "ordering": {
+        "before": [
+          "string"
+        ]
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693915
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

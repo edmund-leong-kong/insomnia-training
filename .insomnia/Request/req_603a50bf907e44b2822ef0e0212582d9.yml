@@ -1,0 +1,73 @@
+_id: req_603a50bf907e44b2822ef0e0212582d9
+type: Request
+parentId: fld_10d8bb4759194d23abf4e17aed82ea3d
+modified: 1739199693904
+created: 1739199693904
+url: "{{ _.base_url }}/workspaces"
+name: Create a new Workspace
+description: >
+  Create a new Workspace
+
+
+  For workspace use cases and configuration examples, see [Workspace examples](https://docs.konghq.com/gateway/3.2.x/kong-enterprise/workspaces/).
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+      "comment": "string",
+      "config": {
+        "meta": {},
+        "portal": true,
+        "portal_access_request_email": true,
+        "portal_application_request_email": true,
+        "portal_application_status_email": true,
+        "portal_approved_email": true,
+        "portal_auth": "string",
+        "portal_auth_conf": "string",
+        "portal_auto_approve": true,
+        "portal_cors_origins": [
+          "string"
+        ],
+        "portal_developer_meta_fields": "[{\"label\":\"Full Name\",\"title\":\"full_name\",\"validator\":{\"required\":true,\"type\":\"string\"}}]",
+        "portal_emails_from": "string",
+        "portal_emails_reply_to": "string",
+        "portal_invite_email": true,
+        "portal_is_legacy": true,
+        "portal_reset_email": true,
+        "portal_reset_success_email": true,
+        "portal_session_conf": "string",
+        "portal_smtp_admin_emails": [
+          "string"
+        ],
+        "portal_token_exp": 0
+      },
+      "created_at": 0,
+      "id": "string",
+      "meta": {
+        "color": "string",
+        "thumbnail": "string"
+      },
+      "name": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693904
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

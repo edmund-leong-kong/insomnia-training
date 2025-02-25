@@ -1,0 +1,28 @@
+_id: req_cc220e6227ac4a6aa7474e38c6e075c0
+type: Request
+parentId: fld_86647cee48074f6d862ca219e5600924
+modified: 1739199693959
+created: 1739199693959
+url: "{{ _.base_url }}/event-hooks"
+name: List all event hooks
+description: List all event hooks and return information about the event hooks.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693959
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

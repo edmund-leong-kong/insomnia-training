@@ -1,0 +1,48 @@
+_id: req_a644cfafae5e476cb7d3ed86896b6fee
+type: Request
+parentId: fld_06a43b6bbab94c41aeefd2c56161e734
+modified: 1739199693931
+created: 1739199693931
+url: "{{ _.base_url }}/consumer_groups/{{ _.group_name_or_id
+  }}/overrides/plugins/rate-limiting-advanced"
+name: Configure rate limiting for a consumer group.
+description: >
+  Define custom rate limiting settings for a consumer group. This endpoint
+  overrides the settings of the Rate Limiting Advanced plugin. As of Kong
+  Gateway 3.4, you can scope plugins to consumer groups using only the
+  `/consumer_groups` endpoint. Using `overrides` is deprecated, and no longer
+  recommended.
+
+  '401': 
+    $ref: '#/components/responses/HTTP401Error'
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "config.limit": "string",
+      "config.window_size": " 10",
+      "config.window_type": "sliding",
+      "config.retry_after_jitter_max": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693931
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

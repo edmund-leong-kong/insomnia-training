@@ -1,0 +1,28 @@
+_id: req_fdac628b314e4466ab26c65ed5c57e01
+type: Request
+parentId: fld_6a937d1db9344ae483e2150c4d84e5cc
+modified: 1739199693944
+created: 1739199693944
+url: "{{ _.base_url }}/schemas/vaults/{{ _.vault_name }}"
+name: Retrieve Vault Schema
+description: Retrieve the schema of a vault.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693944
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

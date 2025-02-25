@@ -1,0 +1,32 @@
+_id: req_d77957a8d9b14a6da1f21ace92ae736c
+type: Request
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693944
+created: 1739199693944
+url: "{{ _.base_url }}/tags/{{ _.tags }}"
+name: List entity by tag
+description: >-
+  Returns the entities that have been tagged with the specified tag.
+
+
+  The list of entities isn't restricted to a single entity type. All the entities tagged with tags are present in this list.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693944
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

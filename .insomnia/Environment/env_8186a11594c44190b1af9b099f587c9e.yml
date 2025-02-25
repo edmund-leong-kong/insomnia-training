@@ -1,0 +1,20 @@
+_id: env_8186a11594c44190b1af9b099f587c9e
+type: Environment
+parentId: env_8d7d185f2ec7c4f0c8342eaf6e254c37e3aa290e
+modified: 1740478826226
+created: 1739199693868
+name: OpenAPI env localhost:8001
+data:
+  scheme: http
+  base_path: ""
+  host: localhost:8001
+  kongAdminToken: thisIsASecret
+dataPropertyOrder:
+  "&":
+    - scheme
+    - base_path
+    - host
+    - kongAdminToken
+color: null
+isPrivate: false
+metaSortKey: 1739199693868

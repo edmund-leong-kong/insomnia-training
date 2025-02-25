@@ -1,0 +1,31 @@
+_id: req_d4dbcc0f394c482d9b4caa79574d104a
+type: Request
+parentId: fld_ff2e19ae806c4912bdfa2bc586afaf2a
+modified: 1739199693962
+created: 1739199693962
+url: "{{ _.base_url }}/cache/{{ _.key }}"
+name: Get cache value by key
+description: >
+  Retrieve the cached value for a specific key. This endpoint probes both
+  `kong.cache` and `kong.core_cache`.  If the key exists, it returns the
+  associated value and TTL. If not found, it returns a 404.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693962
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,40 @@
+_id: req_9bfad909823e4eb688c2020d96c05b99
+type: Request
+parentId: fld_5eede782f0b543c2a9960b80c406f536
+modified: 1739199693877
+created: 1739199693877
+url: "{{ _.base_url }}/ca_certificates/{{ _.ca_certificate_id }}"
+name: Update a CA Certificate
+description: Update a CA Certificate
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "cert": "\"-----BEGIN CERTIFICATE-----...\"",
+      "cert_digest": "c641e28d77e93544f2fa87b2cf3f3d51...",
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693877
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

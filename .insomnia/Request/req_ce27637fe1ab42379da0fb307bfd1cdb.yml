@@ -1,0 +1,28 @@
+_id: req_ce27637fe1ab42379da0fb307bfd1cdb
+type: Request
+parentId: fld_99ed48b72cff443692ac6702d7ea380f
+modified: 1739199693954
+created: 1739199693954
+url: "{{ _.base_url }}/rbac/roles/{{ _.name_or_id }}/permissions"
+name: List Role Permissions
+description: List Role Permissions
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693954
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

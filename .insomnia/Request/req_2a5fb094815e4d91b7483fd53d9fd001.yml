@@ -1,0 +1,28 @@
+_id: req_2a5fb094815e4d91b7483fd53d9fd001
+type: Request
+parentId: fld_0a2cb143ba8448a6b61d34651925da2c
+modified: 1739199693948
+created: 1739199693948
+url: "{{ _.base_url }}/groups/{{ _.name_or_id }}/roles"
+name: List an Group’s Roles
+description: List all roles related to a group.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693948
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

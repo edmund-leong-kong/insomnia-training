@@ -1,0 +1,44 @@
+_id: req_0d93c69835574a1ab03756ddc83e7779
+type: Request
+parentId: fld_fccafe65788a4cd7862c5ec834bcc589
+modified: 1739199693902
+created: 1739199693902
+url: "{{ _.base_url }}/vaults"
+name: Create a new Vault
+description: Create a new Vault
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+      "prefix": "env",
+      "name": "env",
+      "description": "This vault is used to retrieve Redis database access credentials.",
+      "config": {
+        "prefix": "SSL_"
+      },
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693902
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

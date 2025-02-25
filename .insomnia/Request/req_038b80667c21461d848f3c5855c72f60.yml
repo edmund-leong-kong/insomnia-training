@@ -1,0 +1,37 @@
+_id: req_038b80667c21461d848f3c5855c72f60
+type: Request
+parentId: fld_99ed48b72cff443692ac6702d7ea380f
+modified: 1739199693954
+created: 1739199693954
+url: "{{ _.base_url }}/rbac/roles/{{ _.name_or_id }}/entities/{{ _.entity_id }}"
+name: Update an Entity Permission
+description: Update an Entity Permission
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "negative": true,
+      "actions": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693954
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,30 @@
+_id: req_2e45f4620af84f1a95256f0f545b7dba
+type: Request
+parentId: fld_6a937d1db9344ae483e2150c4d84e5cc
+modified: 1739199693942
+created: 1739199693942
+url: "{{ _.base_url }}/status/dns"
+name: DNS Status
+description: >
+  Retrieve DNS worker and stats information. If the legacy DNS client is in use,
+  it returns a 501 status with a message.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693942
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

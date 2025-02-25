@@ -1,0 +1,43 @@
+_id: req_dacbfbdf773d45e0b54fb8629f675682
+type: Request
+parentId: fld_e43d019135f14886b967edd600ddacab
+modified: 1739199693881
+created: 1739199693881
+url: "{{ _.base_url }}/consumers/{{ _.consumer_username_or_id }}"
+name: Update a Consumer
+description: >
+  Update the details of a specific consumer in the system using either the
+  consumer ID or the consumer username.If the consumer with the specified ID or
+  username cannot be found, the endpoint will return a 404.
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "username": "string",
+      "custom_id": "string",
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693881
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

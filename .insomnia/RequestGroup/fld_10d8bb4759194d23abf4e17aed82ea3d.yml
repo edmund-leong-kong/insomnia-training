@@ -1,0 +1,20 @@
+_id: fld_10d8bb4759194d23abf4e17aed82ea3d
+type: RequestGroup
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693872
+created: 1739199693872
+name: Workspaces
+description: >
+  The workspace object describes the workspace entity, which has an ID and a
+  name.
+
+  <br><br>
+
+  Workspaces provide a way to segment Kong Gateway entities. Entities in a workspace are isolated from those in other workspaces. 
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1739199693872
+preRequestScript: null
+afterResponseScript: null
+authentication: null
+headers: null

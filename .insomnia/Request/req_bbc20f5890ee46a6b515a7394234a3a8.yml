@@ -1,0 +1,29 @@
+_id: req_bbc20f5890ee46a6b515a7394234a3a8
+type: Request
+parentId: fld_7d2b7272ce894c4ca1d7bd38930e93c1
+modified: 1739199693883
+created: 1739199693883
+url: "{{ _.base_url }}/consumers/{{ _.consumer_name_or_id }}/plugins/{{
+  _.plugin_id }}"
+name: Delete a plugin associated with a consumer
+description: Delete a plugin associated with a aconsumer using ID.
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693883
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

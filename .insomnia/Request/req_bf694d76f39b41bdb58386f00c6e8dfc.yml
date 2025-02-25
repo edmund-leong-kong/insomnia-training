@@ -1,0 +1,36 @@
+_id: req_bf694d76f39b41bdb58386f00c6e8dfc
+type: Request
+parentId: fld_6cd2d255569349e1becef3a1201ef7a7
+modified: 1739199693947
+created: 1739199693947
+url: "{{ _.base_url }}/admins/{{ _.name_or_id }}/roles"
+name: Create or Update an Admin’s Roles
+description: Create or update roles for an admin
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "roles": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693947
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

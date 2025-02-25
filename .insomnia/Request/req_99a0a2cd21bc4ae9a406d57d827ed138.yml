@@ -1,0 +1,42 @@
+_id: req_99a0a2cd21bc4ae9a406d57d827ed138
+type: Request
+parentId: fld_557e860c51744c6a99196dc1bce1337c
+modified: 1739199693879
+created: 1739199693879
+url: "{{ _.base_url }}/certificates/{{ _.certificate_name_or_id }}/snis"
+name: List all SNIs associated with a Certificate
+description: Retrieve a paginated list of all SNIs associated with a
+  certificate. Use this endpoint to retrieve a list of SNIs that are linked to a
+  specific certificate. You can use the optional query parameters to filter the
+  results based on specific criteria. The response will include the list of SNIs
+  and pagination information. See the response schema for details on the
+  expected format of the response body.
+method: GET
+body: {}
+parameters:
+  - name: size
+    disabled: true
+    value: "100"
+  - name: offset
+    disabled: true
+    value: string
+  - name: tags
+    disabled: true
+    value: string
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693879
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,39 @@
+_id: req_a0161f3caf7a4eefa0532fb7d106bf93
+type: Request
+parentId: fld_91301b69ec5b45be800a959f65fcc89f
+modified: 1739199693943
+created: 1739199693943
+url: "{{ _.base_url }}/keyring/activate"
+name: Activate key
+description: Kong can write new sensitive data fields with the current active
+  key, and read previously written fields in the database with the prior key,
+  provided that key is in the keyring. Kong automatically selects the
+  appropriate key to use when decrypting fields from the database.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "key": "3Rwvk223"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693943
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

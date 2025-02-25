@@ -1,0 +1,29 @@
+_id: req_1e97e1feabfd4621aba420615c515501
+type: Request
+parentId: fld_6cd2d255569349e1becef3a1201ef7a7
+modified: 1739199693947
+created: 1739199693947
+url: "{{ _.base_url }}/admins/{{ _.name_or_id }}/roles"
+name: Delete an Admin’s Role
+description: Delete an admin's roles by passing a comma-separated string of
+  names of specific roles to remove from an admin.
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693947
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,29 @@
+_id: req_44b40b6a8efa42b4ac3e8e30093aae0a
+type: Request
+parentId: fld_ff2e19ae806c4912bdfa2bc586afaf2a
+modified: 1739199693963
+created: 1739199693963
+url: "{{ _.base_url }}/cache"
+name: Purge all cache entries
+description: |
+  Purge all cache entries in both `kong.cache` and `kong.core_cache`.
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693963
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

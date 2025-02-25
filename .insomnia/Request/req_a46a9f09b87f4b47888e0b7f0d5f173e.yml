@@ -1,0 +1,28 @@
+_id: req_a46a9f09b87f4b47888e0b7f0d5f173e
+type: Request
+parentId: fld_7d2b7272ce894c4ca1d7bd38930e93c1
+modified: 1739199693915
+created: 1739199693915
+url: "{{ _.base_url }}/{{ _.workspace }}/plugins/{{ _.plugin_id }}"
+name: Fetch a plugin in a workspace
+description: Get a plugin using ID in a workspace.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693915
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

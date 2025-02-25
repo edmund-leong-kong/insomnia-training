@@ -1,0 +1,53 @@
+_id: req_f22efa9a5ff84060a604acc88c597030
+type: Request
+parentId: fld_557e860c51744c6a99196dc1bce1337c
+modified: 1739199693880
+created: 1739199693880
+url: "{{ _.base_url }}/certificates/{{ _.certificate_id }}/snis/{{
+  _.sni_name_or_id }}"
+name: Upsert an SNI associated with a Certificate
+description: >
+  Create or Update an SNI associated with a Certificate using ID or name.
+
+
+  Inserts (or replaces) the SNI under the requested resource with the definition specified in the body. The SNI will be identified via the name or id attribute.
+
+
+  When the name or id attribute has the structure of a UUID, the SNI being inserted/replaced will be identified by its id. Otherwise it will be identified by its name.
+
+
+  When creating a new SNI without specifying id (neither in the URL nor in the body), then it will be auto-generated.
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "my-sni",
+      "tags": [
+        "[\"user-level\", \"low-priority\"]"
+      ],
+      "certificate": {
+        "id": "91020192-062d-416f-a275-9addeeaffaf2"
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693880
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

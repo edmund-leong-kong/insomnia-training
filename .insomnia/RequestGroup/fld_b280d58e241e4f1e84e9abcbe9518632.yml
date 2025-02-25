@@ -1,0 +1,17 @@
+_id: fld_b280d58e241e4f1e84e9abcbe9518632
+type: RequestGroup
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693872
+created: 1739199693872
+name: Key-sets
+description: >
+  A JSON Web Key Set. Key sets are the preferred way to expose keys to plugins
+  because they tell the plugin where to look for keys or have a scoping
+  mechanism to restrict plugins to specific keys.
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1739199693872
+preRequestScript: null
+afterResponseScript: null
+authentication: null
+headers: null

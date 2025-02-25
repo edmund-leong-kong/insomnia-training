@@ -1,0 +1,48 @@
+_id: req_f8feb9ed5db24f7d9b7174726ec3269c
+type: Request
+parentId: fld_8ab0a0f289094a8f9a098721d04bc976
+modified: 1739199693913
+created: 1739199693913
+url: "{{ _.base_url }}/{{ _.workspace }}/keys"
+name: Create a new Key in a workspace
+description: Create a new Key in a workspace
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "set": {
+        "id": "string"
+      },
+      "name": "my-key",
+      "kid": "42",
+      "jwk": "{\\\"alg\\\":\\\"RSA\\\",  \\\"kid\\\": \\\"42\\\",  ...}",
+      "pem": {
+        "private_key": "private_key\": \"-----BEGIN",
+        "public_key": "public_key\": \"-----BEGIN"
+      },
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693913
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,30 @@
+_id: req_400f40b6d319446d940b274912ffd8e8
+type: Request
+parentId: fld_6a937d1db9344ae483e2150c4d84e5cc
+modified: 1739199693941
+created: 1739199693941
+url: "{{ _.base_url }}/schemas/{{ _.entity }}/validate"
+name: Retrieve entity schema
+description: Retrieve the schema of an entity. This is useful to understand what
+  fields an entity accepts, and can be used for building third-party
+  integrations with Kong.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693941
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

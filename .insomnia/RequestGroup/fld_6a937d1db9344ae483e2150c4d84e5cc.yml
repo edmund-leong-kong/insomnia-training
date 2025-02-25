@@ -1,0 +1,15 @@
+_id: fld_6a937d1db9344ae483e2150c4d84e5cc
+type: RequestGroup
+parentId: wrk_875e772355de415d9f9a868ff1a19912
+modified: 1739199693873
+created: 1739199693873
+name: Information
+description: |
+  Information routes
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1739199693873
+preRequestScript: null
+afterResponseScript: null
+authentication: null
+headers: null

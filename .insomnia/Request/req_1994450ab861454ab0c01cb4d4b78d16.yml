@@ -1,0 +1,28 @@
+_id: req_1994450ab861454ab0c01cb4d4b78d16
+type: Request
+parentId: fld_8b030fa7a20a4d2a931a9ac88e6dc357
+modified: 1739199693919
+created: 1739199693919
+url: "{{ _.base_url }}/{{ _.workspace }}/services/{{ _.service_id_or_name }}"
+name: Delete a Service in a workspace
+description: Delete a Service in a workspace
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693919
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

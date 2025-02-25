@@ -1,0 +1,31 @@
+_id: req_db0742997d61417887486410a0cc26c2
+type: Request
+parentId: fld_6cd2d255569349e1becef3a1201ef7a7
+modified: 1739199693946
+created: 1739199693946
+url: "{{ _.base_url }}/admins/{{ _.name_or_id }}"
+name: Retrieve an Admin
+description: Retrieve an admin using their name or ID. Using
+  `generate_register_url`, you can generate a unique registration URL if the
+  admin's invitation status is `4`. `generate_register_url` overrides the
+  previous registration URL for the particular admin each time it is requested.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693946
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

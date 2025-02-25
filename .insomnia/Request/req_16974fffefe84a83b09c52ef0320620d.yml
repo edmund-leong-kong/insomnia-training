@@ -1,0 +1,37 @@
+_id: req_16974fffefe84a83b09c52ef0320620d
+type: Request
+parentId: fld_8b030fa7a20a4d2a931a9ac88e6dc357
+modified: 1739199693892
+created: 1739199693892
+url: "{{ _.base_url }}/services"
+name: List all services
+description: List all Services
+method: GET
+body: {}
+parameters:
+  - name: size
+    disabled: true
+    value: "100"
+  - name: offset
+    disabled: true
+    value: string
+  - name: tags
+    disabled: true
+    value: string
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693892
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

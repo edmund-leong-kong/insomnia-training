@@ -1,0 +1,30 @@
+_id: req_e18b1d6517c34340aa2054cf3ee8b89a
+type: Request
+parentId: fld_557e860c51744c6a99196dc1bce1337c
+modified: 1739199693879
+created: 1739199693879
+url: "{{ _.base_url }}/certificates/{{ _.certificate_id }}/snis/{{
+  _.sni_name_or_id }}"
+name: Delete a an SNI associated with a Certificate
+description: |
+  Delete a an SNI associated with a Certificate using ID or name.
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693879
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

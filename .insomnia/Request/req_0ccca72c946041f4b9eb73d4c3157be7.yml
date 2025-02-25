@@ -1,0 +1,29 @@
+_id: req_0ccca72c946041f4b9eb73d4c3157be7
+type: Request
+parentId: fld_a7eb964a7c98499f876c5135465c9669
+modified: 1739199693958
+created: 1739199693958
+url: "{{ _.base_url }}/routes/{{ _.route_id_or_name }}/{{ _.filter_chain_id }}"
+name: Delete Filter Chain Associated to a Specific Route
+description: |
+  Delete filter chain associated to a specific route.
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693958
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

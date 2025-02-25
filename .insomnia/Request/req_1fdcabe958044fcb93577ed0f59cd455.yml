@@ -1,0 +1,42 @@
+_id: req_1fdcabe958044fcb93577ed0f59cd455
+type: Request
+parentId: fld_b280d58e241e4f1e84e9abcbe9518632
+modified: 1739199693884
+created: 1739199693884
+url: "{{ _.base_url }}/key-sets"
+name: Create a new Key Set
+description: >
+  This endpoint allows creating a new Key Set by sending a JSON object that
+  describes the Key Set to be created.The request body must contain all the
+  fields required to create a new Key Set.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "my-key_set",
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693884
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

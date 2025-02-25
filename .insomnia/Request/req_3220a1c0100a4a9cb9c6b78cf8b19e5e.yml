@@ -1,0 +1,39 @@
+_id: req_3220a1c0100a4a9cb9c6b78cf8b19e5e
+type: Request
+parentId: fld_a8e7fb40a7764ebfbb8d7a81bf374192
+modified: 1739199693877
+created: 1739199693877
+url: "{{ _.base_url }}/certificates"
+name: List all Certificates
+description: Retrieve a list of all available CA Certificate Authority (CA)
+  certificates. You can use query parameters to filter the results by size or
+  tags, for example `/certificates?size=50&tags=enterprise`.
+method: GET
+body: {}
+parameters:
+  - name: size
+    disabled: true
+    value: "100"
+  - name: offset
+    disabled: true
+    value: string
+  - name: tags
+    disabled: true
+    value: string
+headers: []
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693877
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

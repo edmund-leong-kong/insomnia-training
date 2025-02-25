@@ -1,0 +1,44 @@
+_id: req_cb5dbe4d0614464ca2b758cc33298c33
+type: Request
+parentId: fld_5eede782f0b543c2a9960b80c406f536
+modified: 1739199693876
+created: 1739199693876
+url: "{{ _.base_url }}/ca_certificates"
+name: Create a new CA Certificate
+description: Create a new Certificate Authority (CA) certificate. The request
+  body must include the `cert` property, the certificate data in PEM format; it
+  can also include `cert_digest`, a digest of the certificate in hex format for
+  verifying the certificates integrity, and `tags`, an optional list of tags to
+  categorize the certificate.
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "cert": "\"-----BEGIN CERTIFICATE-----...\"",
+      "cert_digest": "c641e28d77e93544f2fa87b2cf3f3d51...",
+      "tags": [
+        "string"
+      ]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693876
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

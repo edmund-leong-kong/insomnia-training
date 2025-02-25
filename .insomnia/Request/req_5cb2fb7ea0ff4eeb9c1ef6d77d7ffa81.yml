@@ -1,0 +1,43 @@
+_id: req_5cb2fb7ea0ff4eeb9c1ef6d77d7ffa81
+type: Request
+parentId: fld_a7eb964a7c98499f876c5135465c9669
+modified: 1739199693957
+created: 1739199693957
+url: "{{ _.base_url }}/filter-chains/{{ _.filter_chain_id }}"
+name: Update Filter Chain
+description: |
+  Update Filter Chain
+  Note: This API is not available in DB-less mode.
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      " name": "my-chain",
+      "enabled": "string",
+      "route": "string",
+      "service": "20487393-41ed-47f6-93a8-3407cade2002",
+      "filters": "string",
+      "tags": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: Kong-Admin-Token
+  value: "{{ _.kongAdminToken }}"
+  addTo: header
+preRequestScript: null
+metaSortKey: -1739199693957
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
